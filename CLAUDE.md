@@ -4,7 +4,7 @@
 
 ## 開発コマンド
 
-`pnpm lint` / `pnpm typecheck` / `pnpm test` / `pnpm build` がすべて通ることを、PR の前に確認する。CI(`.github/workflows/ci.yml`)でも同じ内容を実行する。
+`pnpm lint` / `pnpm typecheck` / `pnpm test` / `pnpm build` / `pnpm e2e` がすべて通ることを、PR の前に確認する。CI(`.github/workflows/ci.yml`)でも同じ内容を実行する。
 
 ## コーディング規約
 

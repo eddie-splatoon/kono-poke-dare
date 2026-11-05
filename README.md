@@ -23,6 +23,7 @@ pnpm dev
 | `pnpm typecheck` | 型チェック                             |
 | `pnpm test`      | Vitest によるテスト                    |
 | `pnpm build`     | 本番ビルド                             |
+| `pnpm e2e`       | `out/` に対する Playwright のテスト    |
 
 ブランチごとに Git worktree を作って開発します。
 

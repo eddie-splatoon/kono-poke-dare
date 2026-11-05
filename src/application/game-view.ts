@@ -15,6 +15,7 @@ export type GameView = {
   readonly date: string;
   readonly status: GameProgress["status"];
   readonly hintNumber: number;
+  readonly maxHints: number;
   readonly visibleHints: readonly string[];
   readonly score: number | null;
   readonly answer: string | null;
@@ -54,6 +55,7 @@ export function toGameResult(game: DailyGame, question: Question): GameResult {
       date: game.date,
       status: progress.status,
       hintNumber,
+      maxHints: MAX_HINTS,
       visibleHints: question.hints.slice(0, hintNumber),
       score: isPlaying ? null : progress.score,
       answer: isPlaying ? null : question.name,
