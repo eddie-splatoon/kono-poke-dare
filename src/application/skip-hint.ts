@@ -1,21 +1,11 @@
 import { skipProgress } from "@/domain/game/game-progress";
-import {
-  type DailyGame,
-  type GameResult,
-  loadQuestion,
-  toGameResult,
-} from "./game-view";
-import type { QuestionRepository } from "./ports";
+import { type AdvanceGameDeps, advanceGame } from "./advance-game";
+import type { DailyGame, GameResult } from "./game-view";
 
-/** 回答せずに次のヒントへ進む。 */
+/** 回答せずに次のヒントへ進んで保存する。 */
 export async function skipHint(
   input: { readonly game: DailyGame },
-  deps: { readonly questions: QuestionRepository },
+  deps: AdvanceGameDeps,
 ): Promise<GameResult> {
-  const { game } = input;
-  const question = await loadQuestion(deps.questions, game.questionNumber);
-  return toGameResult(
-    { ...game, progress: skipProgress(game.progress) },
-    question,
-  );
+  return advanceGame(input.game, deps, skipProgress);
 }

@@ -1,10 +1,15 @@
 import { readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import { describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it } from "vitest";
+import type { AdvanceGameDeps } from "@/application/advance-game";
 import type { Clock } from "@/application/ports";
 import { skipHint } from "@/application/skip-hint";
 import { startDailyGame } from "@/application/start-daily-game";
 import { submitGuess } from "@/application/submit-guess";
+import {
+  createFakePersistence,
+  createInMemoryDailyGameRepository,
+} from "@/application/test-doubles";
 import { MAX_HINTS } from "@/domain/scoring/score";
 import {
   createStaticQuestionRepository,
@@ -196,8 +201,18 @@ describe("配信するデータ", () => {
   });
   const clock: Clock = { now: () => new Date("2026-11-05T03:00:00.000Z") };
 
+  let deps: AdvanceGameDeps;
+
+  beforeEach(() => {
+    deps = {
+      questions,
+      records: createInMemoryDailyGameRepository(),
+      persistence: createFakePersistence(),
+    };
+  });
+
   it("R-30: 始めて、正解すると won になる", async () => {
-    const { game, view } = await startDailyGame({ clock, questions });
+    const { game, view } = await startDailyGame({ clock, ...deps });
     const loaded = await questions.findByNumber(game.questionNumber);
     if (loaded === null) {
       throw new Error("問題を読み込めませんでした");
@@ -205,18 +220,18 @@ describe("配信するデータ", () => {
 
     expect(view.visibleHints).toEqual(loaded.hints.slice(0, 1));
 
-    const won = await submitGuess({ game, guess: loaded.name }, { questions });
+    const won = await submitGuess({ game, guess: loaded.name }, deps);
 
     expect(won.view.status).toBe("won");
     expect(won.view.answer).toBe(loaded.name);
   });
 
   it("R-30: 10 個のヒントを見て当てられなければ lost になる", async () => {
-    const started = await startDailyGame({ clock, questions });
+    const started = await startDailyGame({ clock, ...deps });
 
     let current = started;
     for (let i = 0; i < MAX_HINTS; i++) {
-      current = await skipHint({ game: current.game }, { questions });
+      current = await skipHint({ game: current.game }, deps);
     }
 
     expect(current.view.status).toBe("lost");

@@ -1,7 +1,7 @@
 ---
 title: 出題、進行、回答判定
 status: implemented
-issues: [12, 13]
+issues: [12, 13, 14]
 code:
   - src/domain/calendar/jst-date.ts
   - src/domain/schedule/daily-question.ts
@@ -97,11 +97,13 @@ updated: 2026-11-05
 
 ## 入出力
 
-| ユースケース     | 入力                       | 出力                |
-| ---------------- | -------------------------- | ------------------- |
-| `startDailyGame` | `Clock`、`QuestionRepository` | `{ game, view }` |
-| `submitGuess`    | `game`、`guess`、`QuestionRepository` | `{ game, view }` |
-| `skipHint`       | `game`、`QuestionRepository` | `{ game, view }`  |
+| ユースケース     | 入力                                                                            | 出力             |
+| ---------------- | ------------------------------------------------------------------------------- | ---------------- |
+| `startDailyGame` | `Clock`、`QuestionRepository`、`DailyGameRepository`                            | `{ game, view }` |
+| `submitGuess`    | `game`、`guess`、`QuestionRepository`、`DailyGameRepository`、`StoragePersistence` | `{ game, view }` |
+| `skipHint`       | `game`、`QuestionRepository`、`DailyGameRepository`、`StoragePersistence`        | `{ game, view }` |
+
+保存と再開の振る舞いは `records.md` で定める。
 
 `game`(`DailyGame`)はシリアライズできる値で、次の項目を持つ。
 
@@ -137,10 +139,10 @@ updated: 2026-11-05
 
 - 回答の入力を信頼しない。文字列として正規化して比較するだけで、評価や HTML への埋め込みをしない
 - `GameView` に未公開のヒントと回答前の正解を含めない。正解データが配信データに含まれることは許容する(`security.md`)
-- 外部へデータを送信しない。この層は保存もしない
+- 外部へデータを送信しない。保存はポートを通して行い、保存値の検証は `records.md` で定める
 
 ## 対象外
 
-- 保存、再開するゲームの選択(#14)
+- 保存、再開するゲームの選択(`records.md`)
 - 問題データの形式の検証(`docs/specs/quiz-data.md`)と中身(#16)
 - 画面(#17)
