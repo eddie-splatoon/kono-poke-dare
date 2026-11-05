@@ -1,32 +1,19 @@
-import { describe, expect, it } from "vitest";
+import { beforeEach, describe, expect, it } from "vitest";
 import { GameFinishedError } from "@/domain/game/game-progress";
-import type { Question } from "@/domain/game/question";
 import { MAX_HINTS } from "@/domain/scoring/score";
+import type { AdvanceGameDeps } from "./advance-game";
 import { type DailyGame, QuestionNotFoundError } from "./game-view";
 import type { Clock, QuestionRepository } from "./ports";
 import { skipHint } from "./skip-hint";
 import { startDailyGame } from "./start-daily-game";
 import { EmptyGuessError, submitGuess } from "./submit-guess";
-
-const QUESTION_COUNT = 5;
-
-function makeQuestion(number: number): Question {
-  return {
-    number,
-    name: `ナマエ${number}`,
-    aliases: [`ベツメイ${number}`],
-    hints: Array.from(
-      { length: MAX_HINTS },
-      (_, i) => `問題${number}のヒント${i + 1}`,
-    ),
-  };
-}
-
-const questions: QuestionRepository = {
-  count: async () => QUESTION_COUNT,
-  findByNumber: async (number) =>
-    number >= 1 && number <= QUESTION_COUNT ? makeQuestion(number) : null,
-};
+import {
+  createFakePersistence,
+  createInMemoryDailyGameRepository,
+  makeQuestion,
+  QUESTION_COUNT,
+  fakeQuestions as questions,
+} from "./test-doubles";
 
 const clockAt = (instant: string): Clock => ({
   now: () => new Date(instant),
@@ -34,14 +21,24 @@ const clockAt = (instant: string): Clock => ({
 
 const NOW = "2026-11-05T03:00:00.000Z";
 
+let deps: AdvanceGameDeps;
+
+beforeEach(() => {
+  deps = {
+    questions,
+    records: createInMemoryDailyGameRepository(),
+    persistence: createFakePersistence(),
+  };
+});
+
 async function start(instant = NOW) {
-  return startDailyGame({ clock: clockAt(instant), questions });
+  return startDailyGame({ clock: clockAt(instant), ...deps });
 }
 
 async function skipTimes(game: DailyGame, times: number) {
-  let current = await skipHint({ game }, { questions });
+  let current = await skipHint({ game }, deps);
   for (let i = 1; i < times; i++) {
-    current = await skipHint({ game: current.game }, { questions });
+    current = await skipHint({ game: current.game }, deps);
   }
   return current;
 }
@@ -82,7 +79,7 @@ describe("startDailyGame", () => {
     };
 
     await expect(
-      startDailyGame({ clock: clockAt(NOW), questions: empty }),
+      startDailyGame({ clock: clockAt(NOW), ...deps, questions: empty }),
     ).rejects.toThrow(QuestionNotFoundError);
   });
 });
@@ -92,7 +89,7 @@ describe("submitGuess", () => {
     const { game } = await start();
     const name = makeQuestion(game.questionNumber).name;
 
-    const result = await submitGuess({ game, guess: name }, { questions });
+    const result = await submitGuess({ game, guess: name }, deps);
 
     expect(result.game.progress).toEqual({
       status: "won",
@@ -107,7 +104,7 @@ describe("submitGuess", () => {
     const { game } = await start();
     const guess = `べつめい${game.questionNumber}`;
 
-    const result = await submitGuess({ game, guess }, { questions });
+    const result = await submitGuess({ game, guess }, deps);
 
     expect(result.view.status).toBe("won");
   });
@@ -115,10 +112,7 @@ describe("submitGuess", () => {
   it("R-30: 不正解なら次のヒントを返す", async () => {
     const { game } = await start();
 
-    const result = await submitGuess(
-      { game, guess: "チガウナマエ" },
-      { questions },
-    );
+    const result = await submitGuess({ game, guess: "チガウナマエ" }, deps);
 
     expect(result.view.status).toBe("playing");
     expect(result.view.hintNumber).toBe(2);
@@ -130,7 +124,7 @@ describe("submitGuess", () => {
     async (guess) => {
       const { game } = await start();
 
-      await expect(submitGuess({ game, guess }, { questions })).rejects.toThrow(
+      await expect(submitGuess({ game, guess }, deps)).rejects.toThrow(
         EmptyGuessError,
       );
       expect(game.progress).toEqual({ status: "playing", hintNumber: 1 });
@@ -143,7 +137,7 @@ describe("submitGuess", () => {
     await expect(
       submitGuess(
         { game: { ...game, questionNumber: QUESTION_COUNT + 1 }, guess: "ア" },
-        { questions },
+        deps,
       ),
     ).rejects.toThrow(QuestionNotFoundError);
   });
@@ -151,10 +145,10 @@ describe("submitGuess", () => {
   it("R-38: 終了したゲームに回答するとエラーにする", async () => {
     const { game } = await start();
     const name = makeQuestion(game.questionNumber).name;
-    const won = await submitGuess({ game, guess: name }, { questions });
+    const won = await submitGuess({ game, guess: name }, deps);
 
     await expect(
-      submitGuess({ game: won.game, guess: name }, { questions }),
+      submitGuess({ game: won.game, guess: name }, deps),
     ).rejects.toThrow(GameFinishedError);
   });
 });
@@ -163,7 +157,7 @@ describe("skipHint", () => {
   it("R-32: 次のヒントを返す", async () => {
     const { game } = await start();
 
-    const result = await skipHint({ game }, { questions });
+    const result = await skipHint({ game }, deps);
 
     expect(result.view.status).toBe("playing");
     expect(result.view.hintNumber).toBe(2);
@@ -173,10 +167,7 @@ describe("skipHint", () => {
     const { game } = await start();
 
     await expect(
-      skipHint(
-        { game: { ...game, questionNumber: QUESTION_COUNT + 1 } },
-        { questions },
-      ),
+      skipHint({ game: { ...game, questionNumber: QUESTION_COUNT + 1 } }, deps),
     ).rejects.toThrow(QuestionNotFoundError);
   });
 
@@ -185,7 +176,7 @@ describe("skipHint", () => {
     const lost = await skipTimes(game, MAX_HINTS);
 
     expect(lost.view.status).toBe("lost");
-    await expect(skipHint({ game: lost.game }, { questions })).rejects.toThrow(
+    await expect(skipHint({ game: lost.game }, deps)).rejects.toThrow(
       GameFinishedError,
     );
   });
@@ -205,12 +196,9 @@ describe("GameView", () => {
   it("R-33: 正解で終わったら、当てたヒントまでだけを含む", async () => {
     const { game } = await start();
     const { hints, name } = makeQuestion(game.questionNumber);
-    const second = await skipHint({ game }, { questions });
+    const second = await skipHint({ game }, deps);
 
-    const won = await submitGuess(
-      { game: second.game, guess: name },
-      { questions },
-    );
+    const won = await submitGuess({ game: second.game, guess: name }, deps);
 
     expect(won.view.hintNumber).toBe(2);
     expect(won.view.visibleHints).toEqual(hints.slice(0, 2));
@@ -229,10 +217,10 @@ describe("GameView", () => {
 
   it("R-34: 進行中は answer が null である", async () => {
     const started = await start();
-    const skipped = await skipHint({ game: started.game }, { questions });
+    const skipped = await skipHint({ game: started.game }, deps);
     const wrong = await submitGuess(
       { game: started.game, guess: "チガウナマエ" },
-      { questions },
+      deps,
     );
 
     expect(started.view.answer).toBeNull();
@@ -244,7 +232,7 @@ describe("GameView", () => {
     const { game } = await start();
     const { name } = makeQuestion(game.questionNumber);
 
-    const won = await submitGuess({ game, guess: name }, { questions });
+    const won = await submitGuess({ game, guess: name }, deps);
 
     expect(won.view.answer).toBe(name);
   });
@@ -265,10 +253,7 @@ describe("0 時をまたいだゲーム", () => {
     const nextDay = await start("2026-11-05T15:00:00.000Z");
     const { name } = makeQuestion(started.game.questionNumber);
 
-    const result = await submitGuess(
-      { game: started.game, guess: name },
-      { questions },
-    );
+    const result = await submitGuess({ game: started.game, guess: name }, deps);
 
     expect(nextDay.game.questionNumber).not.toBe(started.game.questionNumber);
     expect(result.view.date).toBe("2026-11-05");

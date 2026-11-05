@@ -3,13 +3,8 @@ import {
   normalizeAnswer,
 } from "@/domain/answer/normalize-answer";
 import { answerProgress } from "@/domain/game/game-progress";
-import {
-  type DailyGame,
-  type GameResult,
-  loadQuestion,
-  toGameResult,
-} from "./game-view";
-import type { QuestionRepository } from "./ports";
+import { type AdvanceGameDeps, advanceGame } from "./advance-game";
+import type { DailyGame, GameResult } from "./game-view";
 
 export class EmptyGuessError extends Error {
   constructor() {
@@ -18,22 +13,19 @@ export class EmptyGuessError extends Error {
   }
 }
 
-/** 回答を判定して、ゲームを進める。 */
+/** 回答を判定して、ゲームを進めて保存する。 */
 export async function submitGuess(
   input: { readonly game: DailyGame; readonly guess: string },
-  deps: { readonly questions: QuestionRepository },
+  deps: AdvanceGameDeps,
 ): Promise<GameResult> {
   const { game, guess } = input;
   if (normalizeAnswer(guess) === "") {
     throw new EmptyGuessError();
   }
-  const question = await loadQuestion(deps.questions, game.questionNumber);
-  const isCorrect = isCorrectAnswer(guess, [
-    question.name,
-    ...question.aliases,
-  ]);
-  return toGameResult(
-    { ...game, progress: answerProgress(game.progress, isCorrect) },
-    question,
+  return advanceGame(game, deps, (progress, question) =>
+    answerProgress(
+      progress,
+      isCorrectAnswer(guess, [question.name, ...question.aliases]),
+    ),
   );
 }
