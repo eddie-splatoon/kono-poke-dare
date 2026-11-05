@@ -9,4 +9,5 @@
 | 機能                 | 状態        | ファイル                             |
 | -------------------- | ----------- | ------------------------------------ |
 | 得点計算             | implemented | [scoring.md](scoring.md)             |
+| 出題、進行、回答判定 | implemented | [game-rules.md](game-rules.md)       |
 | worktree の補助ツール | implemented | [worktree-tool.md](worktree-tool.md) |
