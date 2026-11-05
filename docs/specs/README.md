@@ -6,6 +6,7 @@
 
 ## 索引
 
-| 機能     | 状態        | ファイル                 |
-| -------- | ----------- | ------------------------ |
-| 得点計算 | implemented | [scoring.md](scoring.md) |
+| 機能                 | 状態        | ファイル                             |
+| -------------------- | ----------- | ------------------------------------ |
+| 得点計算             | implemented | [scoring.md](scoring.md)             |
+| worktree の補助ツール | implemented | [worktree-tool.md](worktree-tool.md) |

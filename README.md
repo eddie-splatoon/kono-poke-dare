@@ -22,4 +22,11 @@ pnpm dev
 | `pnpm test`      | Vitest によるテスト                    |
 | `pnpm build`     | 本番ビルド                             |
 
+ブランチごとに Git worktree を作って開発します。
+
+```sh
+scripts/worktree.sh new feat/some-thing  # .claude/worktrees/ に作り、依存をインストールする
+scripts/worktree.sh clean                # PR がマージ済みの worktree を削除する
+```
+
 コーディング規約は [`.claude/skills/coding-standards/`](.claude/skills/coding-standards/SKILL.md)、機能仕様は [`docs/specs/`](docs/specs/README.md) にあります。脆弱性の報告は [`SECURITY.md`](SECURITY.md) を参照してください。
