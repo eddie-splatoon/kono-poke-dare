@@ -53,6 +53,15 @@ export class MissingHandWrittenError extends Error {
   }
 }
 
+export class InvalidOverrideError extends Error {
+  constructor(number: number, key: string) {
+    super(`overrides のキーが 1〜10 の整数ではありません: ${number}: ${key}`);
+    this.name = "InvalidOverrideError";
+  }
+}
+
+const OVERRIDE_KEY = /^(?:[1-9]|10)$/;
+
 const STAT_LABELS: readonly (readonly [keyof BaseStats, string])[] = [
   ["hp", "HP"],
   ["attack", "攻撃"],
@@ -114,6 +123,11 @@ export function buildQuestion(
 ): BuiltQuestion {
   if (handWritten === undefined) {
     throw new MissingHandWrittenError(facts.number);
+  }
+  for (const key of Object.keys(handWritten.overrides ?? {})) {
+    if (!OVERRIDE_KEY.test(key)) {
+      throw new InvalidOverrideError(facts.number, key);
+    }
   }
   const hints = [
     highestStatHint(facts.stats),

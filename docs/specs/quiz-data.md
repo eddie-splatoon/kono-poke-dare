@@ -16,6 +16,7 @@ tests:
   - scripts/question-data/build-question.test.ts
   - scripts/question-data/parse-pokeapi.test.ts
   - scripts/question-data/cached-fetch.test.ts
+  - scripts/question-data/load-questions.test.ts
 updated: 2026-11-06
 ---
 
@@ -93,6 +94,10 @@ updated: 2026-11-06
 | R-62 | HTTP エラーは、例外にしてキャッシュに残さない                                            |
 | R-63 | PokeAPI 以外のオリジンの URL は、通信せずに例外にする                                     |
 | R-64 | 事実の番号と名前、手書きデータの別名を、問題にそのまま写す                               |
+| R-65 | 複数の世代のファイルを読み、番号順の問題にする                                           |
+| R-66 | 事実の番号が重複していれば、生成をエラーにする                                           |
+| R-67 | 手書きデータの番号が重複していれば、生成をエラーにする                                   |
+| R-68 | `overrides` のキーが 1〜10 の整数でなければ、生成をエラーにする                           |
 
 ## ドメインルール
 

@@ -3,6 +3,7 @@ import { validateQuestion } from "@/domain/game/validate-question";
 import {
   buildQuestion,
   type HandWritten,
+  InvalidOverrideError,
   MissingHandWrittenError,
   type SpeciesFacts,
 } from "./build-question.ts";
@@ -160,6 +161,18 @@ describe("buildQuestion", () => {
       original.hints.filter((_, i) => i !== 6),
     );
   });
+
+  it.each(["0", "11", "１０", "1.5"])(
+    "R-68: overrides のキー %s はエラーにする",
+    (key) => {
+      expect(() =>
+        buildQuestion(facts, {
+          ...handWritten,
+          overrides: { [key]: "置き換えた文である。" },
+        }),
+      ).toThrow(InvalidOverrideError);
+    },
+  );
 
   it("R-54: 手書きデータが欠けていればエラーにする", () => {
     expect(() => buildQuestion(facts, undefined)).toThrow(
