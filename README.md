@@ -25,6 +25,8 @@ pnpm dev
 | `pnpm build`     | 本番ビルド                             |
 | `pnpm e2e`       | `out/` に対する Playwright のテスト    |
 
+`pnpm e2e` の前に `pnpm build` を実行します。初回は `pnpm exec playwright install chromium` でブラウザも取得します。worktree を並列で使うときは、`E2E_PORT` でポートを分けます。
+
 ブランチごとに Git worktree を作って開発します。
 
 ```sh
