@@ -10,5 +10,6 @@
 | -------------------- | ----------- | ------------------------------------ |
 | 得点計算             | implemented | [scoring.md](scoring.md)             |
 | 出題、進行、回答判定 | implemented | [game-rules.md](game-rules.md)       |
+| 問題データの形式と検証 | implemented | [quiz-data.md](quiz-data.md)         |
 | worktree の補助ツール | implemented | [worktree-tool.md](worktree-tool.md) |
 | 記録の保存           | implemented | [records.md](records.md)             |
