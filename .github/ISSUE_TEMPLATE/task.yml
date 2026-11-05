@@ -1,0 +1,25 @@
+name: タスク
+description: リファクタリング、設定、ドキュメントなど、機能以外の作業
+labels: [chore]
+body:
+  - type: textarea
+    id: background
+    attributes:
+      label: 背景
+      description: なぜこの作業が必要か
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: やること
+      placeholder: "- [ ] "
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 完了条件
+      placeholder: "- [ ] "
+    validations:
+      required: true

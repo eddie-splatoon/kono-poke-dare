@@ -6,6 +6,16 @@
 
 `pnpm lint` / `pnpm typecheck` / `pnpm test` / `pnpm build` がすべて通ることを、PR の前に確認する。CI(`.github/workflows/ci.yml`)でも同じ内容を実行する。
 
+## コーディング規約
+
+実装、設計、Issue の起票、PR の作成、レビューの前に、必ず `coding-standards` Skill(`.claude/skills/coding-standards/SKILL.md`)を読んで従う。
+
+- オニオンアーキテクチャで実装する
+- TDD で開発する
+- セキュアコードを保つ
+- 新規機能は実装前に Issue を起票する。大きな作業は Sub Issue に分け、PR は最低 1 つの Issue にひも付ける
+- 機能仕様を `docs/specs/` に記録する
+
 ## 操作アカウント
 
 このリポジトリのコミット、PR、Issue はすべて `eddie-splatoon` 名義にする。他の人間のアカウント名やメールアドレスを、コミット履歴、PR、Issue、リポジトリ内のファイルに書かない。
