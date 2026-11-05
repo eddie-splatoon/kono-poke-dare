@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { MAX_HINTS, scoreForHint } from "./score";
 
 describe("scoreForHint", () => {
-  it("ヒントが進むごとに 100 から 10 ずつ下がる", () => {
+  it("R-1: ヒントが進むごとに 100 から 10 ずつ下がる", () => {
     const scores = Array.from({ length: MAX_HINTS }, (_, i) =>
       scoreForHint(i + 1),
     );
@@ -10,7 +10,7 @@ describe("scoreForHint", () => {
   });
 
   it.each([0, 11, -1, 1.5, Number.NaN])(
-    "範囲外の %s はエラーにする",
+    "R-2: 範囲外の %s はエラーにする",
     (hint) => {
       expect(() => scoreForHint(hint)).toThrow(RangeError);
     },
