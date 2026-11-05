@@ -1,5 +1,5 @@
 name: バグの報告
-description: 期待どおりに動かないことを報告する。脆弱性や正解データの漏えいは、ここに書かず SECURITY.md の窓口へ
+description: 期待どおりに動かないことを報告する。脆弱性は、ここに書かず SECURITY.md の窓口へ
 labels: [bug]
 body:
   - type: textarea
@@ -33,5 +33,5 @@ body:
     attributes:
       label: 確認
       options:
-        - label: 脆弱性や正解データの漏えいではない
+        - label: 脆弱性ではない
           required: true

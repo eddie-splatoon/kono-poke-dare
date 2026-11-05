@@ -16,7 +16,7 @@ flowchart LR
 - 新規機能は、検討の時点で、実装の前に必ず Issue を起票する
 - テンプレート(機能、バグ、タスク)を使う
 - 背景と完了条件を書く
-- 脆弱性や正解データの漏えいは、公開の Issue に書かない([`SECURITY.md`](../../../../SECURITY.md))
+- 脆弱性は、公開の Issue に書かない([`SECURITY.md`](../../../../SECURITY.md))
 
 ## Sub Issue
 
@@ -52,7 +52,7 @@ PR には最低 1 つの Issue を、本文でひも付ける。
 既存のラベルから選ぶ。存在しないラベルは作らず、必要なら Issue で相談する。
 
 - 種別: `enhancement`、`bug`、`refactor`、`test`、`chore`、`documentation`、`perf`、`ci`、`dependencies`
-- 領域: `area:data`、`area:game`、`area:auth`、`area:ui`、`area:db`
+- 領域: `area:data`、`area:game`、`area:ui`
 - 必要に応じて: `security`、`legal`、`blocked`
 
 ## 関連する Skill
