@@ -1,0 +1,57 @@
+name: 機能の提案
+description: 新しい機能や機能の変更を提案する。実装の前に起票する
+labels: [enhancement]
+body:
+  - type: textarea
+    id: background
+    attributes:
+      label: 背景
+      description: なぜこの機能が必要か
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: やること
+      description: 実装する内容をタスクリストで書く
+      placeholder: "- [ ] "
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: 対象外
+      description: この Issue で扱わないこと
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 完了条件
+      description: テストや確認で判断できる条件を書く
+      placeholder: "- [ ] "
+    validations:
+      required: true
+  - type: input
+    id: spec
+    attributes:
+      label: 仕様ドキュメント
+      description: 新しく作る、または更新する docs/specs/ のファイル
+      placeholder: docs/specs/<feature>.md
+    validations:
+      required: true
+  - type: dropdown
+    id: split
+    attributes:
+      label: Sub Issue への分割
+      description: 複数の層や領域にまたがる、または 1 つの PR でレビューしきれない場合は分割する
+      options:
+        - 不要
+        - 必要
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 確認
+      options:
+        - label: 権利(公式の画像、ロゴ、音声、規約)に関わる場合は、`legal` ラベルを付ける
+        - label: 外部への送信や端末内のデータの扱いに関わる場合は、`security` ラベルを付ける

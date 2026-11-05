@@ -21,3 +21,5 @@ pnpm dev
 | `pnpm typecheck` | 型チェック                             |
 | `pnpm test`      | Vitest によるテスト                    |
 | `pnpm build`     | 本番ビルド                             |
+
+コーディング規約は [`.claude/skills/coding-standards/`](.claude/skills/coding-standards/SKILL.md)、機能仕様は [`docs/specs/`](docs/specs/README.md) にあります。脆弱性の報告は [`SECURITY.md`](SECURITY.md) を参照してください。
