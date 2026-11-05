@@ -83,6 +83,8 @@ test.describe("表示", () => {
     page,
   }) => {
     await open(page);
+    expect(await page.content()).not.toContain(ANSWER);
+
     await skipTo(page, 3);
     await guess(page, WRONG);
     await expect(hintProgress(page)).toHaveText("ヒント 4 / 10");
@@ -172,6 +174,22 @@ test.describe("次のヒントへ進む", () => {
     await open(page);
 
     await skipButton(page).dblclick();
+
+    await expect(hintProgress(page)).toHaveText("ヒント 2 / 10");
+    await expect(skipButton(page)).toBeEnabled();
+    await expect(hintProgress(page)).toHaveText("ヒント 2 / 10");
+  });
+
+  test("R-9: 同じイベントループで 2 回クリックしても、ヒントは 1 つだけ進む", async ({
+    page,
+  }) => {
+    await open(page);
+
+    // 再描画でボタンが無効になる前に 2 回押して、ハンドラの再入の防止を確かめる。
+    await skipButton(page).evaluate((button: HTMLButtonElement) => {
+      button.click();
+      button.click();
+    });
 
     await expect(hintProgress(page)).toHaveText("ヒント 2 / 10");
     await expect(skipButton(page)).toBeEnabled();

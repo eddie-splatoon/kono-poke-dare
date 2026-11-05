@@ -38,7 +38,9 @@ async function resolveFile(pathname: string): Promise<string | null> {
 }
 
 await stat(join(root, "index.html")).catch(() => {
-  console.error("out/index.html がありません。先に pnpm build を実行します。");
+  console.error(
+    "out/index.html がありません。先に pnpm build を実行してください。",
+  );
   process.exit(1);
 });
 
