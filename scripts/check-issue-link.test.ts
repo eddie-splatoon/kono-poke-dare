@@ -71,6 +71,9 @@ describe("check-issue-link.sh", () => {
     "<!-- コメント -->\nCloses #12",
     "```\nコード\n```\nCloses #12",
     "`コード` Closes #12",
+    "`<!--`\nCloses #12",
+    "```\n<!--\n```\nCloses #12",
+    "<!--\n```\n-->\nCloses #12",
   ])("R-4: コメントとコードの外の参照は数える: %j", (body) => {
     expect(check(body).status).toBe(0);
   });
