@@ -7,7 +7,7 @@ import { checkQuestionData } from "./check-question-data";
 import { loadQuestions } from "./question-data/load-questions.ts";
 
 /** 世代ごとに増やし、全種類のデータが完成したら(#16)、1025 にする。 */
-const EXPECTED_QUESTION_COUNT = 809;
+const EXPECTED_QUESTION_COUNT = 905;
 
 const PUBLIC_DIRECTORY = fileURLToPath(
   new URL("../public/data/questions", import.meta.url),
