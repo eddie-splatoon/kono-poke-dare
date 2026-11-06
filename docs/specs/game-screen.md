@@ -17,7 +17,7 @@ tests:
   - src/application/game-session.test.ts
   - e2e/game.spec.ts
   - e2e/base-path.spec.ts
-updated: 2026-11-06
+updated: 2026-11-07
 ---
 
 # ゲーム画面
@@ -119,4 +119,4 @@ updated: 2026-11-06
 - タブ間の画面の同期(次の操作で保存済みの値に揃う。別のタブが先に進めていると、操作したタブの表示はまとめて進み、得点も保存済みのヒントを基準にする。`records.md` の R-10、R-11)
 - 名前の入力補完
 - 履歴の一覧表示
-- データの扱いの説明ページ(#18)
+- データの扱いの説明ページ(`about-page.md`)
