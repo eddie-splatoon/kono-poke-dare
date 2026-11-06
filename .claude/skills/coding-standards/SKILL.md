@@ -35,6 +35,8 @@ Issue → worktree 作成 → 仕様 → Red → Green → Refactor → PR → �
 
 作業に関係する reference を読んでから始める。
 
+層の禁止 import は `pnpm lint` が、PR の Issue への参照は CI の `issue-link` が確認する。どちらもレビューの代わりにはならず、判定できない項目は各 reference に従って確認する。
+
 ## 完了前のチェックリスト
 
 - [ ] worktree の中で作業している

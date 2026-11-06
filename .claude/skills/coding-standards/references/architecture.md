@@ -40,9 +40,17 @@ flowchart TD
 | `domain`         | `domain` のみ                              | 他の層すべて、Next.js、React、IndexedDB、外部 SDK                                        |
 | `application`    | `domain`、`application`                    | `infrastructure`、`composition`、`app`、`components`、Next.js、React、IndexedDB、外部 SDK |
 | `infrastructure` | `domain`、`application`、外部 SDK          | `composition`、`app`、`components`                                                       |
-| `composition`    | `application`、`infrastructure`            | `app`、`components`                                                                      |
-| `components`     | `application` の DTO の型、`components`    | `infrastructure`、`composition`、IndexedDB の直接の利用                                  |
-| `app`            | `application`、`composition`、`components` | `infrastructure` の直接の import                                                         |
+| `composition`    | `application`、`infrastructure`            | `domain`、`app`、`components`                                                            |
+| `components`     | `application` の DTO の型、`components`    | `domain`、`infrastructure`、`composition`、`app`、IndexedDB の直接の利用                 |
+| `app`            | `application`、`composition`、`components` | `domain`、`infrastructure` の直接の import                                               |
+
+`biome.json` の `noRestrictedImports` が、層と Next.js、React の禁止 import を `pnpm lint` のエラーにする。`src/` の各層では親方向の相対 import(`../`)も禁止なので、層をまたぐ import は `@/` で書く。要件は [`docs/specs/coding-standards-enforcement.md`](../../../../docs/specs/coding-standards-enforcement.md) にある。
+
+次の項目は lint で判定できないので、レビューで確認する。
+
+- `components` が `application` の DTO の型だけを import していること
+- `domain` と `application` が外部 SDK に依存していないこと
+- IndexedDB、`process.env`、現在時刻、乱数を、許されていない層で直接利用していないこと
 
 ```ts
 // OK: application が domain に依存する
