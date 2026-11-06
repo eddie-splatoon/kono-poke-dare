@@ -143,7 +143,7 @@ updated: 2026-11-06
 
 ### 全種類の確認
 
-`scripts/check-question-data.test.ts` の `EXPECTED_QUESTION_COUNT` を期待する問題数とする。図鑑の順に世代ごとに増やし(151、251、386、493、649、721、809、905)、全種類のデータの完成時(#16)に 1025 にする。
+`scripts/check-question-data.test.ts` の `EXPECTED_QUESTION_COUNT` を期待する問題数とする。全種類の問題数である 1025 とする(#16)。
 
 ### データの作成
 
