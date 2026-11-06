@@ -1,7 +1,7 @@
 ---
 title: 問題データの並列変更
 status: implemented
-issues: []
+issues: [36]
 code:
   - scripts/question-data/shard-scope.ts
   - scripts/question-data/check-shard-scope.ts
