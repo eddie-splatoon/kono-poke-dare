@@ -1,0 +1,2982 @@
+[
+  {
+    "number": 252,
+    "name": "キモリ",
+    "generation": 3,
+    "heightM": 0.5,
+    "weightKg": 5,
+    "types": ["くさ"],
+    "stats": {
+      "hp": 40,
+      "attack": 45,
+      "defense": 35,
+      "specialAttack": 65,
+      "specialDefense": 55,
+      "speed": 70
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 2,
+      "branches": 1
+    },
+    "varieties": ["treecko"]
+  },
+  {
+    "number": 253,
+    "name": "ジュプトル",
+    "generation": 3,
+    "heightM": 0.9,
+    "weightKg": 21.6,
+    "types": ["くさ"],
+    "stats": {
+      "hp": 50,
+      "attack": 65,
+      "defense": 45,
+      "specialAttack": 85,
+      "specialDefense": 65,
+      "speed": 95
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["grovyle"]
+  },
+  {
+    "number": 254,
+    "name": "ジュカイン",
+    "generation": 3,
+    "heightM": 1.7,
+    "weightKg": 52.2,
+    "types": ["くさ"],
+    "stats": {
+      "hp": 70,
+      "attack": 85,
+      "defense": 65,
+      "specialAttack": 105,
+      "specialDefense": 85,
+      "speed": 120
+    },
+    "evolution": {
+      "stepsBefore": 2,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["sceptile", "sceptile-mega"]
+  },
+  {
+    "number": 255,
+    "name": "アチャモ",
+    "generation": 3,
+    "heightM": 0.4,
+    "weightKg": 2.5,
+    "types": ["ほのお"],
+    "stats": {
+      "hp": 45,
+      "attack": 60,
+      "defense": 40,
+      "specialAttack": 70,
+      "specialDefense": 50,
+      "speed": 45
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 2,
+      "branches": 1
+    },
+    "varieties": ["torchic"]
+  },
+  {
+    "number": 256,
+    "name": "ワカシャモ",
+    "generation": 3,
+    "heightM": 0.9,
+    "weightKg": 19.5,
+    "types": ["ほのお", "かくとう"],
+    "stats": {
+      "hp": 60,
+      "attack": 85,
+      "defense": 60,
+      "specialAttack": 85,
+      "specialDefense": 60,
+      "speed": 55
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["combusken"]
+  },
+  {
+    "number": 257,
+    "name": "バシャーモ",
+    "generation": 3,
+    "heightM": 1.9,
+    "weightKg": 52,
+    "types": ["ほのお", "かくとう"],
+    "stats": {
+      "hp": 80,
+      "attack": 120,
+      "defense": 70,
+      "specialAttack": 110,
+      "specialDefense": 70,
+      "speed": 80
+    },
+    "evolution": {
+      "stepsBefore": 2,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["blaziken", "blaziken-mega"]
+  },
+  {
+    "number": 258,
+    "name": "ミズゴロウ",
+    "generation": 3,
+    "heightM": 0.4,
+    "weightKg": 7.6,
+    "types": ["みず"],
+    "stats": {
+      "hp": 50,
+      "attack": 70,
+      "defense": 50,
+      "specialAttack": 50,
+      "specialDefense": 50,
+      "speed": 40
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 2,
+      "branches": 1
+    },
+    "varieties": ["mudkip"]
+  },
+  {
+    "number": 259,
+    "name": "ヌマクロー",
+    "generation": 3,
+    "heightM": 0.7,
+    "weightKg": 28,
+    "types": ["みず", "じめん"],
+    "stats": {
+      "hp": 70,
+      "attack": 85,
+      "defense": 70,
+      "specialAttack": 60,
+      "specialDefense": 70,
+      "speed": 50
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["marshtomp"]
+  },
+  {
+    "number": 260,
+    "name": "ラグラージ",
+    "generation": 3,
+    "heightM": 1.5,
+    "weightKg": 81.9,
+    "types": ["みず", "じめん"],
+    "stats": {
+      "hp": 100,
+      "attack": 110,
+      "defense": 90,
+      "specialAttack": 85,
+      "specialDefense": 90,
+      "speed": 60
+    },
+    "evolution": {
+      "stepsBefore": 2,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["swampert", "swampert-mega"]
+  },
+  {
+    "number": 261,
+    "name": "ポチエナ",
+    "generation": 3,
+    "heightM": 0.5,
+    "weightKg": 13.6,
+    "types": ["あく"],
+    "stats": {
+      "hp": 35,
+      "attack": 55,
+      "defense": 35,
+      "specialAttack": 30,
+      "specialDefense": 30,
+      "speed": 35
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["poochyena"]
+  },
+  {
+    "number": 262,
+    "name": "グラエナ",
+    "generation": 3,
+    "heightM": 1,
+    "weightKg": 37,
+    "types": ["あく"],
+    "stats": {
+      "hp": 70,
+      "attack": 90,
+      "defense": 70,
+      "specialAttack": 60,
+      "specialDefense": 60,
+      "speed": 70
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["mightyena"]
+  },
+  {
+    "number": 263,
+    "name": "ジグザグマ",
+    "generation": 3,
+    "heightM": 0.4,
+    "weightKg": 17.5,
+    "types": ["ノーマル"],
+    "stats": {
+      "hp": 38,
+      "attack": 30,
+      "defense": 41,
+      "specialAttack": 30,
+      "specialDefense": 41,
+      "speed": 60
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 2,
+      "branches": 1
+    },
+    "varieties": ["zigzagoon", "zigzagoon-galar"]
+  },
+  {
+    "number": 264,
+    "name": "マッスグマ",
+    "generation": 3,
+    "heightM": 0.5,
+    "weightKg": 32.5,
+    "types": ["ノーマル"],
+    "stats": {
+      "hp": 78,
+      "attack": 70,
+      "defense": 61,
+      "specialAttack": 50,
+      "specialDefense": 61,
+      "speed": 100
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["linoone", "linoone-galar"]
+  },
+  {
+    "number": 265,
+    "name": "ケムッソ",
+    "generation": 3,
+    "heightM": 0.3,
+    "weightKg": 3.6,
+    "types": ["むし"],
+    "stats": {
+      "hp": 45,
+      "attack": 45,
+      "defense": 35,
+      "specialAttack": 20,
+      "specialDefense": 30,
+      "speed": 20
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 2,
+      "branches": 2
+    },
+    "varieties": ["wurmple"]
+  },
+  {
+    "number": 266,
+    "name": "カラサリス",
+    "generation": 3,
+    "heightM": 0.6,
+    "weightKg": 10,
+    "types": ["むし"],
+    "stats": {
+      "hp": 50,
+      "attack": 35,
+      "defense": 55,
+      "specialAttack": 25,
+      "specialDefense": 25,
+      "speed": 15
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["silcoon"]
+  },
+  {
+    "number": 267,
+    "name": "アゲハント",
+    "generation": 3,
+    "heightM": 1,
+    "weightKg": 28.4,
+    "types": ["むし", "ひこう"],
+    "stats": {
+      "hp": 60,
+      "attack": 70,
+      "defense": 50,
+      "specialAttack": 100,
+      "specialDefense": 50,
+      "speed": 65
+    },
+    "evolution": {
+      "stepsBefore": 2,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["beautifly"]
+  },
+  {
+    "number": 268,
+    "name": "マユルド",
+    "generation": 3,
+    "heightM": 0.7,
+    "weightKg": 11.5,
+    "types": ["むし"],
+    "stats": {
+      "hp": 50,
+      "attack": 35,
+      "defense": 55,
+      "specialAttack": 25,
+      "specialDefense": 25,
+      "speed": 15
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["cascoon"]
+  },
+  {
+    "number": 269,
+    "name": "ドクケイル",
+    "generation": 3,
+    "heightM": 1.2,
+    "weightKg": 31.6,
+    "types": ["むし", "どく"],
+    "stats": {
+      "hp": 60,
+      "attack": 50,
+      "defense": 70,
+      "specialAttack": 50,
+      "specialDefense": 90,
+      "speed": 65
+    },
+    "evolution": {
+      "stepsBefore": 2,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["dustox"]
+  },
+  {
+    "number": 270,
+    "name": "ハスボー",
+    "generation": 3,
+    "heightM": 0.5,
+    "weightKg": 2.6,
+    "types": ["みず", "くさ"],
+    "stats": {
+      "hp": 40,
+      "attack": 30,
+      "defense": 30,
+      "specialAttack": 40,
+      "specialDefense": 50,
+      "speed": 30
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 2,
+      "branches": 1
+    },
+    "varieties": ["lotad"]
+  },
+  {
+    "number": 271,
+    "name": "ハスブレロ",
+    "generation": 3,
+    "heightM": 1.2,
+    "weightKg": 32.5,
+    "types": ["みず", "くさ"],
+    "stats": {
+      "hp": 60,
+      "attack": 50,
+      "defense": 50,
+      "specialAttack": 60,
+      "specialDefense": 70,
+      "speed": 50
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["lombre"]
+  },
+  {
+    "number": 272,
+    "name": "ルンパッパ",
+    "generation": 3,
+    "heightM": 1.5,
+    "weightKg": 55,
+    "types": ["みず", "くさ"],
+    "stats": {
+      "hp": 80,
+      "attack": 70,
+      "defense": 70,
+      "specialAttack": 90,
+      "specialDefense": 100,
+      "speed": 70
+    },
+    "evolution": {
+      "stepsBefore": 2,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["ludicolo"]
+  },
+  {
+    "number": 273,
+    "name": "タネボー",
+    "generation": 3,
+    "heightM": 0.5,
+    "weightKg": 4,
+    "types": ["くさ"],
+    "stats": {
+      "hp": 40,
+      "attack": 40,
+      "defense": 50,
+      "specialAttack": 30,
+      "specialDefense": 30,
+      "speed": 30
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 2,
+      "branches": 1
+    },
+    "varieties": ["seedot"]
+  },
+  {
+    "number": 274,
+    "name": "コノハナ",
+    "generation": 3,
+    "heightM": 1,
+    "weightKg": 28,
+    "types": ["くさ", "あく"],
+    "stats": {
+      "hp": 70,
+      "attack": 70,
+      "defense": 40,
+      "specialAttack": 60,
+      "specialDefense": 40,
+      "speed": 60
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["nuzleaf"]
+  },
+  {
+    "number": 275,
+    "name": "ダーテング",
+    "generation": 3,
+    "heightM": 1.3,
+    "weightKg": 59.6,
+    "types": ["くさ", "あく"],
+    "stats": {
+      "hp": 90,
+      "attack": 100,
+      "defense": 60,
+      "specialAttack": 90,
+      "specialDefense": 60,
+      "speed": 80
+    },
+    "evolution": {
+      "stepsBefore": 2,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["shiftry"]
+  },
+  {
+    "number": 276,
+    "name": "スバメ",
+    "generation": 3,
+    "heightM": 0.3,
+    "weightKg": 2.3,
+    "types": ["ノーマル", "ひこう"],
+    "stats": {
+      "hp": 40,
+      "attack": 55,
+      "defense": 30,
+      "specialAttack": 30,
+      "specialDefense": 30,
+      "speed": 85
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["taillow"]
+  },
+  {
+    "number": 277,
+    "name": "オオスバメ",
+    "generation": 3,
+    "heightM": 0.7,
+    "weightKg": 19.8,
+    "types": ["ノーマル", "ひこう"],
+    "stats": {
+      "hp": 60,
+      "attack": 85,
+      "defense": 60,
+      "specialAttack": 75,
+      "specialDefense": 50,
+      "speed": 125
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["swellow"]
+  },
+  {
+    "number": 278,
+    "name": "キャモメ",
+    "generation": 3,
+    "heightM": 0.6,
+    "weightKg": 9.5,
+    "types": ["みず", "ひこう"],
+    "stats": {
+      "hp": 40,
+      "attack": 30,
+      "defense": 30,
+      "specialAttack": 55,
+      "specialDefense": 30,
+      "speed": 85
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["wingull"]
+  },
+  {
+    "number": 279,
+    "name": "ペリッパー",
+    "generation": 3,
+    "heightM": 1.2,
+    "weightKg": 28,
+    "types": ["みず", "ひこう"],
+    "stats": {
+      "hp": 60,
+      "attack": 50,
+      "defense": 100,
+      "specialAttack": 95,
+      "specialDefense": 70,
+      "speed": 65
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["pelipper"]
+  },
+  {
+    "number": 280,
+    "name": "ラルトス",
+    "generation": 3,
+    "heightM": 0.4,
+    "weightKg": 6.6,
+    "types": ["エスパー", "フェアリー"],
+    "stats": {
+      "hp": 28,
+      "attack": 25,
+      "defense": 25,
+      "specialAttack": 45,
+      "specialDefense": 35,
+      "speed": 40
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 2,
+      "branches": 1
+    },
+    "varieties": ["ralts"]
+  },
+  {
+    "number": 281,
+    "name": "キルリア",
+    "generation": 3,
+    "heightM": 0.8,
+    "weightKg": 20.2,
+    "types": ["エスパー", "フェアリー"],
+    "stats": {
+      "hp": 38,
+      "attack": 35,
+      "defense": 35,
+      "specialAttack": 65,
+      "specialDefense": 55,
+      "speed": 50
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 2
+    },
+    "varieties": ["kirlia"]
+  },
+  {
+    "number": 282,
+    "name": "サーナイト",
+    "generation": 3,
+    "heightM": 1.6,
+    "weightKg": 48.4,
+    "types": ["エスパー", "フェアリー"],
+    "stats": {
+      "hp": 68,
+      "attack": 65,
+      "defense": 65,
+      "specialAttack": 125,
+      "specialDefense": 115,
+      "speed": 80
+    },
+    "evolution": {
+      "stepsBefore": 2,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["gardevoir", "gardevoir-mega"]
+  },
+  {
+    "number": 283,
+    "name": "アメタマ",
+    "generation": 3,
+    "heightM": 0.5,
+    "weightKg": 1.7,
+    "types": ["むし", "みず"],
+    "stats": {
+      "hp": 40,
+      "attack": 30,
+      "defense": 32,
+      "specialAttack": 50,
+      "specialDefense": 52,
+      "speed": 65
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["surskit"]
+  },
+  {
+    "number": 284,
+    "name": "アメモース",
+    "generation": 3,
+    "heightM": 0.8,
+    "weightKg": 3.6,
+    "types": ["むし", "ひこう"],
+    "stats": {
+      "hp": 70,
+      "attack": 60,
+      "defense": 62,
+      "specialAttack": 100,
+      "specialDefense": 82,
+      "speed": 80
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["masquerain"]
+  },
+  {
+    "number": 285,
+    "name": "キノココ",
+    "generation": 3,
+    "heightM": 0.4,
+    "weightKg": 4.5,
+    "types": ["くさ"],
+    "stats": {
+      "hp": 60,
+      "attack": 40,
+      "defense": 60,
+      "specialAttack": 40,
+      "specialDefense": 60,
+      "speed": 35
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["shroomish"]
+  },
+  {
+    "number": 286,
+    "name": "キノガッサ",
+    "generation": 3,
+    "heightM": 1.2,
+    "weightKg": 39.2,
+    "types": ["くさ", "かくとう"],
+    "stats": {
+      "hp": 60,
+      "attack": 130,
+      "defense": 80,
+      "specialAttack": 60,
+      "specialDefense": 60,
+      "speed": 70
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["breloom"]
+  },
+  {
+    "number": 287,
+    "name": "ナマケロ",
+    "generation": 3,
+    "heightM": 0.8,
+    "weightKg": 24,
+    "types": ["ノーマル"],
+    "stats": {
+      "hp": 60,
+      "attack": 60,
+      "defense": 60,
+      "specialAttack": 35,
+      "specialDefense": 35,
+      "speed": 30
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 2,
+      "branches": 1
+    },
+    "varieties": ["slakoth"]
+  },
+  {
+    "number": 288,
+    "name": "ヤルキモノ",
+    "generation": 3,
+    "heightM": 1.4,
+    "weightKg": 46.5,
+    "types": ["ノーマル"],
+    "stats": {
+      "hp": 80,
+      "attack": 80,
+      "defense": 80,
+      "specialAttack": 55,
+      "specialDefense": 55,
+      "speed": 90
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["vigoroth"]
+  },
+  {
+    "number": 289,
+    "name": "ケッキング",
+    "generation": 3,
+    "heightM": 2,
+    "weightKg": 130.5,
+    "types": ["ノーマル"],
+    "stats": {
+      "hp": 150,
+      "attack": 160,
+      "defense": 100,
+      "specialAttack": 95,
+      "specialDefense": 65,
+      "speed": 100
+    },
+    "evolution": {
+      "stepsBefore": 2,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["slaking"]
+  },
+  {
+    "number": 290,
+    "name": "ツチニン",
+    "generation": 3,
+    "heightM": 0.5,
+    "weightKg": 5.5,
+    "types": ["むし", "じめん"],
+    "stats": {
+      "hp": 31,
+      "attack": 45,
+      "defense": 90,
+      "specialAttack": 30,
+      "specialDefense": 30,
+      "speed": 40
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 2
+    },
+    "varieties": ["nincada"]
+  },
+  {
+    "number": 291,
+    "name": "テッカニン",
+    "generation": 3,
+    "heightM": 0.8,
+    "weightKg": 12,
+    "types": ["むし", "ひこう"],
+    "stats": {
+      "hp": 61,
+      "attack": 90,
+      "defense": 45,
+      "specialAttack": 50,
+      "specialDefense": 50,
+      "speed": 160
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["ninjask"]
+  },
+  {
+    "number": 292,
+    "name": "ヌケニン",
+    "generation": 3,
+    "heightM": 0.8,
+    "weightKg": 1.2,
+    "types": ["むし", "ゴースト"],
+    "stats": {
+      "hp": 1,
+      "attack": 90,
+      "defense": 45,
+      "specialAttack": 30,
+      "specialDefense": 30,
+      "speed": 40
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["shedinja"]
+  },
+  {
+    "number": 293,
+    "name": "ゴニョニョ",
+    "generation": 3,
+    "heightM": 0.6,
+    "weightKg": 16.3,
+    "types": ["ノーマル"],
+    "stats": {
+      "hp": 64,
+      "attack": 51,
+      "defense": 23,
+      "specialAttack": 51,
+      "specialDefense": 23,
+      "speed": 28
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 2,
+      "branches": 1
+    },
+    "varieties": ["whismur"]
+  },
+  {
+    "number": 294,
+    "name": "ドゴーム",
+    "generation": 3,
+    "heightM": 1,
+    "weightKg": 40.5,
+    "types": ["ノーマル"],
+    "stats": {
+      "hp": 84,
+      "attack": 71,
+      "defense": 43,
+      "specialAttack": 71,
+      "specialDefense": 43,
+      "speed": 48
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["loudred"]
+  },
+  {
+    "number": 295,
+    "name": "バクオング",
+    "generation": 3,
+    "heightM": 1.5,
+    "weightKg": 84,
+    "types": ["ノーマル"],
+    "stats": {
+      "hp": 104,
+      "attack": 91,
+      "defense": 63,
+      "specialAttack": 91,
+      "specialDefense": 73,
+      "speed": 68
+    },
+    "evolution": {
+      "stepsBefore": 2,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["exploud"]
+  },
+  {
+    "number": 296,
+    "name": "マクノシタ",
+    "generation": 3,
+    "heightM": 1,
+    "weightKg": 86.4,
+    "types": ["かくとう"],
+    "stats": {
+      "hp": 72,
+      "attack": 60,
+      "defense": 30,
+      "specialAttack": 20,
+      "specialDefense": 30,
+      "speed": 25
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["makuhita"]
+  },
+  {
+    "number": 297,
+    "name": "ハリテヤマ",
+    "generation": 3,
+    "heightM": 2.3,
+    "weightKg": 253.8,
+    "types": ["かくとう"],
+    "stats": {
+      "hp": 144,
+      "attack": 120,
+      "defense": 60,
+      "specialAttack": 40,
+      "specialDefense": 60,
+      "speed": 50
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["hariyama"]
+  },
+  {
+    "number": 298,
+    "name": "ルリリ",
+    "generation": 3,
+    "heightM": 0.2,
+    "weightKg": 2,
+    "types": ["ノーマル", "フェアリー"],
+    "stats": {
+      "hp": 50,
+      "attack": 20,
+      "defense": 40,
+      "specialAttack": 20,
+      "specialDefense": 40,
+      "speed": 20
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 2,
+      "branches": 1
+    },
+    "varieties": ["azurill"]
+  },
+  {
+    "number": 299,
+    "name": "ノズパス",
+    "generation": 3,
+    "heightM": 1,
+    "weightKg": 97,
+    "types": ["いわ"],
+    "stats": {
+      "hp": 30,
+      "attack": 45,
+      "defense": 135,
+      "specialAttack": 45,
+      "specialDefense": 90,
+      "speed": 30
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["nosepass"]
+  },
+  {
+    "number": 300,
+    "name": "エネコ",
+    "generation": 3,
+    "heightM": 0.6,
+    "weightKg": 11,
+    "types": ["ノーマル"],
+    "stats": {
+      "hp": 50,
+      "attack": 45,
+      "defense": 45,
+      "specialAttack": 35,
+      "specialDefense": 35,
+      "speed": 50
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["skitty"]
+  },
+  {
+    "number": 301,
+    "name": "エネコロロ",
+    "generation": 3,
+    "heightM": 1.1,
+    "weightKg": 32.6,
+    "types": ["ノーマル"],
+    "stats": {
+      "hp": 70,
+      "attack": 65,
+      "defense": 65,
+      "specialAttack": 55,
+      "specialDefense": 55,
+      "speed": 90
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["delcatty"]
+  },
+  {
+    "number": 302,
+    "name": "ヤミラミ",
+    "generation": 3,
+    "heightM": 0.5,
+    "weightKg": 11,
+    "types": ["あく", "ゴースト"],
+    "stats": {
+      "hp": 50,
+      "attack": 75,
+      "defense": 75,
+      "specialAttack": 65,
+      "specialDefense": 65,
+      "speed": 50
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["sableye", "sableye-mega"]
+  },
+  {
+    "number": 303,
+    "name": "クチート",
+    "generation": 3,
+    "heightM": 0.6,
+    "weightKg": 11.5,
+    "types": ["はがね", "フェアリー"],
+    "stats": {
+      "hp": 50,
+      "attack": 85,
+      "defense": 85,
+      "specialAttack": 55,
+      "specialDefense": 55,
+      "speed": 50
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["mawile", "mawile-mega"]
+  },
+  {
+    "number": 304,
+    "name": "ココドラ",
+    "generation": 3,
+    "heightM": 0.4,
+    "weightKg": 60,
+    "types": ["はがね", "いわ"],
+    "stats": {
+      "hp": 50,
+      "attack": 70,
+      "defense": 100,
+      "specialAttack": 40,
+      "specialDefense": 40,
+      "speed": 30
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 2,
+      "branches": 1
+    },
+    "varieties": ["aron"]
+  },
+  {
+    "number": 305,
+    "name": "コドラ",
+    "generation": 3,
+    "heightM": 0.9,
+    "weightKg": 120,
+    "types": ["はがね", "いわ"],
+    "stats": {
+      "hp": 60,
+      "attack": 90,
+      "defense": 140,
+      "specialAttack": 50,
+      "specialDefense": 50,
+      "speed": 40
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["lairon"]
+  },
+  {
+    "number": 306,
+    "name": "ボスゴドラ",
+    "generation": 3,
+    "heightM": 2.1,
+    "weightKg": 360,
+    "types": ["はがね", "いわ"],
+    "stats": {
+      "hp": 70,
+      "attack": 110,
+      "defense": 180,
+      "specialAttack": 60,
+      "specialDefense": 60,
+      "speed": 50
+    },
+    "evolution": {
+      "stepsBefore": 2,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["aggron", "aggron-mega"]
+  },
+  {
+    "number": 307,
+    "name": "アサナン",
+    "generation": 3,
+    "heightM": 0.6,
+    "weightKg": 11.2,
+    "types": ["かくとう", "エスパー"],
+    "stats": {
+      "hp": 30,
+      "attack": 40,
+      "defense": 55,
+      "specialAttack": 40,
+      "specialDefense": 55,
+      "speed": 60
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["meditite"]
+  },
+  {
+    "number": 308,
+    "name": "チャーレム",
+    "generation": 3,
+    "heightM": 1.3,
+    "weightKg": 31.5,
+    "types": ["かくとう", "エスパー"],
+    "stats": {
+      "hp": 60,
+      "attack": 60,
+      "defense": 75,
+      "specialAttack": 60,
+      "specialDefense": 75,
+      "speed": 80
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["medicham", "medicham-mega"]
+  },
+  {
+    "number": 309,
+    "name": "ラクライ",
+    "generation": 3,
+    "heightM": 0.6,
+    "weightKg": 15.2,
+    "types": ["でんき"],
+    "stats": {
+      "hp": 40,
+      "attack": 45,
+      "defense": 40,
+      "specialAttack": 65,
+      "specialDefense": 40,
+      "speed": 65
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["electrike"]
+  },
+  {
+    "number": 310,
+    "name": "ライボルト",
+    "generation": 3,
+    "heightM": 1.5,
+    "weightKg": 40.2,
+    "types": ["でんき"],
+    "stats": {
+      "hp": 70,
+      "attack": 75,
+      "defense": 60,
+      "specialAttack": 105,
+      "specialDefense": 60,
+      "speed": 105
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["manectric", "manectric-mega"]
+  },
+  {
+    "number": 311,
+    "name": "プラスル",
+    "generation": 3,
+    "heightM": 0.4,
+    "weightKg": 4.2,
+    "types": ["でんき"],
+    "stats": {
+      "hp": 60,
+      "attack": 50,
+      "defense": 40,
+      "specialAttack": 85,
+      "specialDefense": 75,
+      "speed": 95
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["plusle"]
+  },
+  {
+    "number": 312,
+    "name": "マイナン",
+    "generation": 3,
+    "heightM": 0.4,
+    "weightKg": 4.2,
+    "types": ["でんき"],
+    "stats": {
+      "hp": 60,
+      "attack": 40,
+      "defense": 50,
+      "specialAttack": 75,
+      "specialDefense": 85,
+      "speed": 95
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["minun"]
+  },
+  {
+    "number": 313,
+    "name": "バルビート",
+    "generation": 3,
+    "heightM": 0.7,
+    "weightKg": 17.7,
+    "types": ["むし"],
+    "stats": {
+      "hp": 65,
+      "attack": 73,
+      "defense": 75,
+      "specialAttack": 47,
+      "specialDefense": 85,
+      "speed": 85
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["volbeat"]
+  },
+  {
+    "number": 314,
+    "name": "イルミーゼ",
+    "generation": 3,
+    "heightM": 0.6,
+    "weightKg": 17.7,
+    "types": ["むし"],
+    "stats": {
+      "hp": 65,
+      "attack": 47,
+      "defense": 75,
+      "specialAttack": 73,
+      "specialDefense": 85,
+      "speed": 85
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["illumise"]
+  },
+  {
+    "number": 315,
+    "name": "ロゼリア",
+    "generation": 3,
+    "heightM": 0.3,
+    "weightKg": 2,
+    "types": ["くさ", "どく"],
+    "stats": {
+      "hp": 50,
+      "attack": 60,
+      "defense": 45,
+      "specialAttack": 100,
+      "specialDefense": 80,
+      "speed": 65
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["roselia"]
+  },
+  {
+    "number": 316,
+    "name": "ゴクリン",
+    "generation": 3,
+    "heightM": 0.4,
+    "weightKg": 10.3,
+    "types": ["どく"],
+    "stats": {
+      "hp": 70,
+      "attack": 43,
+      "defense": 53,
+      "specialAttack": 43,
+      "specialDefense": 53,
+      "speed": 40
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["gulpin"]
+  },
+  {
+    "number": 317,
+    "name": "マルノーム",
+    "generation": 3,
+    "heightM": 1.7,
+    "weightKg": 80,
+    "types": ["どく"],
+    "stats": {
+      "hp": 100,
+      "attack": 73,
+      "defense": 83,
+      "specialAttack": 73,
+      "specialDefense": 83,
+      "speed": 55
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["swalot"]
+  },
+  {
+    "number": 318,
+    "name": "キバニア",
+    "generation": 3,
+    "heightM": 0.8,
+    "weightKg": 20.8,
+    "types": ["みず", "あく"],
+    "stats": {
+      "hp": 45,
+      "attack": 90,
+      "defense": 20,
+      "specialAttack": 65,
+      "specialDefense": 20,
+      "speed": 65
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["carvanha"]
+  },
+  {
+    "number": 319,
+    "name": "サメハダー",
+    "generation": 3,
+    "heightM": 1.8,
+    "weightKg": 88.8,
+    "types": ["みず", "あく"],
+    "stats": {
+      "hp": 70,
+      "attack": 120,
+      "defense": 40,
+      "specialAttack": 95,
+      "specialDefense": 40,
+      "speed": 95
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["sharpedo", "sharpedo-mega"]
+  },
+  {
+    "number": 320,
+    "name": "ホエルコ",
+    "generation": 3,
+    "heightM": 2,
+    "weightKg": 130,
+    "types": ["みず"],
+    "stats": {
+      "hp": 130,
+      "attack": 70,
+      "defense": 35,
+      "specialAttack": 70,
+      "specialDefense": 35,
+      "speed": 60
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["wailmer"]
+  },
+  {
+    "number": 321,
+    "name": "ホエルオー",
+    "generation": 3,
+    "heightM": 14.5,
+    "weightKg": 398,
+    "types": ["みず"],
+    "stats": {
+      "hp": 170,
+      "attack": 90,
+      "defense": 45,
+      "specialAttack": 90,
+      "specialDefense": 45,
+      "speed": 60
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["wailord"]
+  },
+  {
+    "number": 322,
+    "name": "ドンメル",
+    "generation": 3,
+    "heightM": 0.7,
+    "weightKg": 24,
+    "types": ["ほのお", "じめん"],
+    "stats": {
+      "hp": 60,
+      "attack": 60,
+      "defense": 40,
+      "specialAttack": 65,
+      "specialDefense": 45,
+      "speed": 35
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["numel"]
+  },
+  {
+    "number": 323,
+    "name": "バクーダ",
+    "generation": 3,
+    "heightM": 1.9,
+    "weightKg": 220,
+    "types": ["ほのお", "じめん"],
+    "stats": {
+      "hp": 70,
+      "attack": 100,
+      "defense": 70,
+      "specialAttack": 105,
+      "specialDefense": 75,
+      "speed": 40
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["camerupt", "camerupt-mega"]
+  },
+  {
+    "number": 324,
+    "name": "コータス",
+    "generation": 3,
+    "heightM": 0.5,
+    "weightKg": 80.4,
+    "types": ["ほのお"],
+    "stats": {
+      "hp": 70,
+      "attack": 85,
+      "defense": 140,
+      "specialAttack": 85,
+      "specialDefense": 70,
+      "speed": 20
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["torkoal"]
+  },
+  {
+    "number": 325,
+    "name": "バネブー",
+    "generation": 3,
+    "heightM": 0.7,
+    "weightKg": 30.6,
+    "types": ["エスパー"],
+    "stats": {
+      "hp": 60,
+      "attack": 25,
+      "defense": 35,
+      "specialAttack": 70,
+      "specialDefense": 80,
+      "speed": 60
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["spoink"]
+  },
+  {
+    "number": 326,
+    "name": "ブーピッグ",
+    "generation": 3,
+    "heightM": 0.9,
+    "weightKg": 71.5,
+    "types": ["エスパー"],
+    "stats": {
+      "hp": 80,
+      "attack": 45,
+      "defense": 65,
+      "specialAttack": 90,
+      "specialDefense": 110,
+      "speed": 80
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["grumpig"]
+  },
+  {
+    "number": 327,
+    "name": "パッチール",
+    "generation": 3,
+    "heightM": 1.1,
+    "weightKg": 5,
+    "types": ["ノーマル"],
+    "stats": {
+      "hp": 60,
+      "attack": 60,
+      "defense": 60,
+      "specialAttack": 60,
+      "specialDefense": 60,
+      "speed": 60
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["spinda"]
+  },
+  {
+    "number": 328,
+    "name": "ナックラー",
+    "generation": 3,
+    "heightM": 0.7,
+    "weightKg": 15,
+    "types": ["じめん"],
+    "stats": {
+      "hp": 45,
+      "attack": 100,
+      "defense": 45,
+      "specialAttack": 45,
+      "specialDefense": 45,
+      "speed": 10
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 2,
+      "branches": 1
+    },
+    "varieties": ["trapinch"]
+  },
+  {
+    "number": 329,
+    "name": "ビブラーバ",
+    "generation": 3,
+    "heightM": 1.1,
+    "weightKg": 15.3,
+    "types": ["じめん", "ドラゴン"],
+    "stats": {
+      "hp": 50,
+      "attack": 70,
+      "defense": 50,
+      "specialAttack": 50,
+      "specialDefense": 50,
+      "speed": 70
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["vibrava"]
+  },
+  {
+    "number": 330,
+    "name": "フライゴン",
+    "generation": 3,
+    "heightM": 2,
+    "weightKg": 82,
+    "types": ["じめん", "ドラゴン"],
+    "stats": {
+      "hp": 80,
+      "attack": 100,
+      "defense": 80,
+      "specialAttack": 80,
+      "specialDefense": 80,
+      "speed": 100
+    },
+    "evolution": {
+      "stepsBefore": 2,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["flygon"]
+  },
+  {
+    "number": 331,
+    "name": "サボネア",
+    "generation": 3,
+    "heightM": 0.4,
+    "weightKg": 51.3,
+    "types": ["くさ"],
+    "stats": {
+      "hp": 50,
+      "attack": 85,
+      "defense": 40,
+      "specialAttack": 85,
+      "specialDefense": 40,
+      "speed": 35
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["cacnea"]
+  },
+  {
+    "number": 332,
+    "name": "ノクタス",
+    "generation": 3,
+    "heightM": 1.3,
+    "weightKg": 77.4,
+    "types": ["くさ", "あく"],
+    "stats": {
+      "hp": 70,
+      "attack": 115,
+      "defense": 60,
+      "specialAttack": 115,
+      "specialDefense": 60,
+      "speed": 55
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["cacturne"]
+  },
+  {
+    "number": 333,
+    "name": "チルット",
+    "generation": 3,
+    "heightM": 0.4,
+    "weightKg": 1.2,
+    "types": ["ノーマル", "ひこう"],
+    "stats": {
+      "hp": 45,
+      "attack": 40,
+      "defense": 60,
+      "specialAttack": 40,
+      "specialDefense": 75,
+      "speed": 50
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["swablu"]
+  },
+  {
+    "number": 334,
+    "name": "チルタリス",
+    "generation": 3,
+    "heightM": 1.1,
+    "weightKg": 20.6,
+    "types": ["ドラゴン", "ひこう"],
+    "stats": {
+      "hp": 75,
+      "attack": 70,
+      "defense": 90,
+      "specialAttack": 70,
+      "specialDefense": 105,
+      "speed": 80
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["altaria", "altaria-mega"]
+  },
+  {
+    "number": 335,
+    "name": "ザングース",
+    "generation": 3,
+    "heightM": 1.3,
+    "weightKg": 40.3,
+    "types": ["ノーマル"],
+    "stats": {
+      "hp": 73,
+      "attack": 115,
+      "defense": 60,
+      "specialAttack": 60,
+      "specialDefense": 60,
+      "speed": 90
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["zangoose"]
+  },
+  {
+    "number": 336,
+    "name": "ハブネーク",
+    "generation": 3,
+    "heightM": 2.7,
+    "weightKg": 52.5,
+    "types": ["どく"],
+    "stats": {
+      "hp": 73,
+      "attack": 100,
+      "defense": 60,
+      "specialAttack": 100,
+      "specialDefense": 60,
+      "speed": 65
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["seviper"]
+  },
+  {
+    "number": 337,
+    "name": "ルナトーン",
+    "generation": 3,
+    "heightM": 1,
+    "weightKg": 168,
+    "types": ["いわ", "エスパー"],
+    "stats": {
+      "hp": 90,
+      "attack": 55,
+      "defense": 65,
+      "specialAttack": 95,
+      "specialDefense": 85,
+      "speed": 70
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["lunatone"]
+  },
+  {
+    "number": 338,
+    "name": "ソルロック",
+    "generation": 3,
+    "heightM": 1.2,
+    "weightKg": 154,
+    "types": ["いわ", "エスパー"],
+    "stats": {
+      "hp": 90,
+      "attack": 95,
+      "defense": 85,
+      "specialAttack": 55,
+      "specialDefense": 65,
+      "speed": 70
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["solrock"]
+  },
+  {
+    "number": 339,
+    "name": "ドジョッチ",
+    "generation": 3,
+    "heightM": 0.4,
+    "weightKg": 1.9,
+    "types": ["みず", "じめん"],
+    "stats": {
+      "hp": 50,
+      "attack": 48,
+      "defense": 43,
+      "specialAttack": 46,
+      "specialDefense": 41,
+      "speed": 60
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["barboach"]
+  },
+  {
+    "number": 340,
+    "name": "ナマズン",
+    "generation": 3,
+    "heightM": 0.9,
+    "weightKg": 23.6,
+    "types": ["みず", "じめん"],
+    "stats": {
+      "hp": 110,
+      "attack": 78,
+      "defense": 73,
+      "specialAttack": 76,
+      "specialDefense": 71,
+      "speed": 60
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["whiscash"]
+  },
+  {
+    "number": 341,
+    "name": "ヘイガニ",
+    "generation": 3,
+    "heightM": 0.6,
+    "weightKg": 11.5,
+    "types": ["みず"],
+    "stats": {
+      "hp": 43,
+      "attack": 80,
+      "defense": 65,
+      "specialAttack": 50,
+      "specialDefense": 35,
+      "speed": 35
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["corphish"]
+  },
+  {
+    "number": 342,
+    "name": "シザリガー",
+    "generation": 3,
+    "heightM": 1.1,
+    "weightKg": 32.8,
+    "types": ["みず", "あく"],
+    "stats": {
+      "hp": 63,
+      "attack": 120,
+      "defense": 85,
+      "specialAttack": 90,
+      "specialDefense": 55,
+      "speed": 55
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["crawdaunt"]
+  },
+  {
+    "number": 343,
+    "name": "ヤジロン",
+    "generation": 3,
+    "heightM": 0.5,
+    "weightKg": 21.5,
+    "types": ["じめん", "エスパー"],
+    "stats": {
+      "hp": 40,
+      "attack": 40,
+      "defense": 55,
+      "specialAttack": 40,
+      "specialDefense": 70,
+      "speed": 55
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["baltoy"]
+  },
+  {
+    "number": 344,
+    "name": "ネンドール",
+    "generation": 3,
+    "heightM": 1.5,
+    "weightKg": 108,
+    "types": ["じめん", "エスパー"],
+    "stats": {
+      "hp": 60,
+      "attack": 70,
+      "defense": 105,
+      "specialAttack": 70,
+      "specialDefense": 120,
+      "speed": 75
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["claydol"]
+  },
+  {
+    "number": 345,
+    "name": "リリーラ",
+    "generation": 3,
+    "heightM": 1,
+    "weightKg": 23.8,
+    "types": ["いわ", "くさ"],
+    "stats": {
+      "hp": 66,
+      "attack": 41,
+      "defense": 77,
+      "specialAttack": 61,
+      "specialDefense": 87,
+      "speed": 23
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["lileep"]
+  },
+  {
+    "number": 346,
+    "name": "ユレイドル",
+    "generation": 3,
+    "heightM": 1.5,
+    "weightKg": 60.4,
+    "types": ["いわ", "くさ"],
+    "stats": {
+      "hp": 86,
+      "attack": 81,
+      "defense": 97,
+      "specialAttack": 81,
+      "specialDefense": 107,
+      "speed": 43
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["cradily"]
+  },
+  {
+    "number": 347,
+    "name": "アノプス",
+    "generation": 3,
+    "heightM": 0.7,
+    "weightKg": 12.5,
+    "types": ["いわ", "むし"],
+    "stats": {
+      "hp": 45,
+      "attack": 95,
+      "defense": 50,
+      "specialAttack": 40,
+      "specialDefense": 50,
+      "speed": 75
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["anorith"]
+  },
+  {
+    "number": 348,
+    "name": "アーマルド",
+    "generation": 3,
+    "heightM": 1.5,
+    "weightKg": 68.2,
+    "types": ["いわ", "むし"],
+    "stats": {
+      "hp": 75,
+      "attack": 125,
+      "defense": 100,
+      "specialAttack": 70,
+      "specialDefense": 80,
+      "speed": 45
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["armaldo"]
+  },
+  {
+    "number": 349,
+    "name": "ヒンバス",
+    "generation": 3,
+    "heightM": 0.6,
+    "weightKg": 7.4,
+    "types": ["みず"],
+    "stats": {
+      "hp": 20,
+      "attack": 15,
+      "defense": 20,
+      "specialAttack": 10,
+      "specialDefense": 55,
+      "speed": 80
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["feebas"]
+  },
+  {
+    "number": 350,
+    "name": "ミロカロス",
+    "generation": 3,
+    "heightM": 6.2,
+    "weightKg": 162,
+    "types": ["みず"],
+    "stats": {
+      "hp": 95,
+      "attack": 60,
+      "defense": 79,
+      "specialAttack": 100,
+      "specialDefense": 125,
+      "speed": 81
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["milotic"]
+  },
+  {
+    "number": 351,
+    "name": "ポワルン",
+    "generation": 3,
+    "heightM": 0.3,
+    "weightKg": 0.8,
+    "types": ["ノーマル"],
+    "stats": {
+      "hp": 70,
+      "attack": 70,
+      "defense": 70,
+      "specialAttack": 70,
+      "specialDefense": 70,
+      "speed": 70
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": [
+      "castform",
+      "castform-sunny",
+      "castform-rainy",
+      "castform-snowy"
+    ]
+  },
+  {
+    "number": 352,
+    "name": "カクレオン",
+    "generation": 3,
+    "heightM": 1,
+    "weightKg": 22,
+    "types": ["ノーマル"],
+    "stats": {
+      "hp": 60,
+      "attack": 90,
+      "defense": 70,
+      "specialAttack": 60,
+      "specialDefense": 120,
+      "speed": 40
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["kecleon"]
+  },
+  {
+    "number": 353,
+    "name": "カゲボウズ",
+    "generation": 3,
+    "heightM": 0.6,
+    "weightKg": 2.3,
+    "types": ["ゴースト"],
+    "stats": {
+      "hp": 44,
+      "attack": 75,
+      "defense": 35,
+      "specialAttack": 63,
+      "specialDefense": 33,
+      "speed": 45
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["shuppet"]
+  },
+  {
+    "number": 354,
+    "name": "ジュペッタ",
+    "generation": 3,
+    "heightM": 1.1,
+    "weightKg": 12.5,
+    "types": ["ゴースト"],
+    "stats": {
+      "hp": 64,
+      "attack": 115,
+      "defense": 65,
+      "specialAttack": 83,
+      "specialDefense": 63,
+      "speed": 65
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["banette", "banette-mega"]
+  },
+  {
+    "number": 355,
+    "name": "ヨマワル",
+    "generation": 3,
+    "heightM": 0.8,
+    "weightKg": 15,
+    "types": ["ゴースト"],
+    "stats": {
+      "hp": 20,
+      "attack": 40,
+      "defense": 90,
+      "specialAttack": 30,
+      "specialDefense": 90,
+      "speed": 25
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 2,
+      "branches": 1
+    },
+    "varieties": ["duskull"]
+  },
+  {
+    "number": 356,
+    "name": "サマヨール",
+    "generation": 3,
+    "heightM": 1.6,
+    "weightKg": 30.6,
+    "types": ["ゴースト"],
+    "stats": {
+      "hp": 40,
+      "attack": 70,
+      "defense": 130,
+      "specialAttack": 60,
+      "specialDefense": 130,
+      "speed": 25
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["dusclops"]
+  },
+  {
+    "number": 357,
+    "name": "トロピウス",
+    "generation": 3,
+    "heightM": 2,
+    "weightKg": 100,
+    "types": ["くさ", "ひこう"],
+    "stats": {
+      "hp": 99,
+      "attack": 68,
+      "defense": 83,
+      "specialAttack": 72,
+      "specialDefense": 87,
+      "speed": 51
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["tropius"]
+  },
+  {
+    "number": 358,
+    "name": "チリーン",
+    "generation": 3,
+    "heightM": 0.6,
+    "weightKg": 1,
+    "types": ["エスパー"],
+    "stats": {
+      "hp": 75,
+      "attack": 50,
+      "defense": 80,
+      "specialAttack": 95,
+      "specialDefense": 90,
+      "speed": 65
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["chimecho", "chimecho-mega"]
+  },
+  {
+    "number": 359,
+    "name": "アブソル",
+    "generation": 3,
+    "heightM": 1.2,
+    "weightKg": 47,
+    "types": ["あく"],
+    "stats": {
+      "hp": 65,
+      "attack": 130,
+      "defense": 60,
+      "specialAttack": 75,
+      "specialDefense": 60,
+      "speed": 75
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["absol", "absol-mega", "absol-mega-z"]
+  },
+  {
+    "number": 360,
+    "name": "ソーナノ",
+    "generation": 3,
+    "heightM": 0.6,
+    "weightKg": 14,
+    "types": ["エスパー"],
+    "stats": {
+      "hp": 95,
+      "attack": 23,
+      "defense": 48,
+      "specialAttack": 23,
+      "specialDefense": 48,
+      "speed": 23
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["wynaut"]
+  },
+  {
+    "number": 361,
+    "name": "ユキワラシ",
+    "generation": 3,
+    "heightM": 0.7,
+    "weightKg": 16.8,
+    "types": ["こおり"],
+    "stats": {
+      "hp": 50,
+      "attack": 50,
+      "defense": 50,
+      "specialAttack": 50,
+      "specialDefense": 50,
+      "speed": 50
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 2
+    },
+    "varieties": ["snorunt"]
+  },
+  {
+    "number": 362,
+    "name": "オニゴーリ",
+    "generation": 3,
+    "heightM": 1.5,
+    "weightKg": 256.5,
+    "types": ["こおり"],
+    "stats": {
+      "hp": 80,
+      "attack": 80,
+      "defense": 80,
+      "specialAttack": 80,
+      "specialDefense": 80,
+      "speed": 80
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["glalie", "glalie-mega"]
+  },
+  {
+    "number": 363,
+    "name": "タマザラシ",
+    "generation": 3,
+    "heightM": 0.8,
+    "weightKg": 39.5,
+    "types": ["こおり", "みず"],
+    "stats": {
+      "hp": 70,
+      "attack": 40,
+      "defense": 50,
+      "specialAttack": 55,
+      "specialDefense": 50,
+      "speed": 25
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 2,
+      "branches": 1
+    },
+    "varieties": ["spheal"]
+  },
+  {
+    "number": 364,
+    "name": "トドグラー",
+    "generation": 3,
+    "heightM": 1.1,
+    "weightKg": 87.6,
+    "types": ["こおり", "みず"],
+    "stats": {
+      "hp": 90,
+      "attack": 60,
+      "defense": 70,
+      "specialAttack": 75,
+      "specialDefense": 70,
+      "speed": 45
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["sealeo"]
+  },
+  {
+    "number": 365,
+    "name": "トドゼルガ",
+    "generation": 3,
+    "heightM": 1.4,
+    "weightKg": 150.6,
+    "types": ["こおり", "みず"],
+    "stats": {
+      "hp": 110,
+      "attack": 80,
+      "defense": 90,
+      "specialAttack": 95,
+      "specialDefense": 90,
+      "speed": 65
+    },
+    "evolution": {
+      "stepsBefore": 2,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["walrein"]
+  },
+  {
+    "number": 366,
+    "name": "パールル",
+    "generation": 3,
+    "heightM": 0.4,
+    "weightKg": 52.5,
+    "types": ["みず"],
+    "stats": {
+      "hp": 35,
+      "attack": 64,
+      "defense": 85,
+      "specialAttack": 74,
+      "specialDefense": 55,
+      "speed": 32
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 1,
+      "branches": 2
+    },
+    "varieties": ["clamperl"]
+  },
+  {
+    "number": 367,
+    "name": "ハンテール",
+    "generation": 3,
+    "heightM": 1.7,
+    "weightKg": 27,
+    "types": ["みず"],
+    "stats": {
+      "hp": 55,
+      "attack": 104,
+      "defense": 105,
+      "specialAttack": 94,
+      "specialDefense": 75,
+      "speed": 52
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["huntail"]
+  },
+  {
+    "number": 368,
+    "name": "サクラビス",
+    "generation": 3,
+    "heightM": 1.8,
+    "weightKg": 22.6,
+    "types": ["みず"],
+    "stats": {
+      "hp": 55,
+      "attack": 84,
+      "defense": 105,
+      "specialAttack": 114,
+      "specialDefense": 75,
+      "speed": 52
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["gorebyss"]
+  },
+  {
+    "number": 369,
+    "name": "ジーランス",
+    "generation": 3,
+    "heightM": 1,
+    "weightKg": 23.4,
+    "types": ["みず", "いわ"],
+    "stats": {
+      "hp": 100,
+      "attack": 90,
+      "defense": 130,
+      "specialAttack": 45,
+      "specialDefense": 65,
+      "speed": 55
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["relicanth"]
+  },
+  {
+    "number": 370,
+    "name": "ラブカス",
+    "generation": 3,
+    "heightM": 0.6,
+    "weightKg": 8.7,
+    "types": ["みず"],
+    "stats": {
+      "hp": 43,
+      "attack": 30,
+      "defense": 55,
+      "specialAttack": 40,
+      "specialDefense": 65,
+      "speed": 97
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["luvdisc"]
+  },
+  {
+    "number": 371,
+    "name": "タツベイ",
+    "generation": 3,
+    "heightM": 0.6,
+    "weightKg": 42.1,
+    "types": ["ドラゴン"],
+    "stats": {
+      "hp": 45,
+      "attack": 75,
+      "defense": 60,
+      "specialAttack": 40,
+      "specialDefense": 30,
+      "speed": 50
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 2,
+      "branches": 1
+    },
+    "varieties": ["bagon"]
+  },
+  {
+    "number": 372,
+    "name": "コモルー",
+    "generation": 3,
+    "heightM": 1.1,
+    "weightKg": 110.5,
+    "types": ["ドラゴン"],
+    "stats": {
+      "hp": 65,
+      "attack": 95,
+      "defense": 100,
+      "specialAttack": 60,
+      "specialDefense": 50,
+      "speed": 50
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["shelgon"]
+  },
+  {
+    "number": 373,
+    "name": "ボーマンダ",
+    "generation": 3,
+    "heightM": 1.5,
+    "weightKg": 102.6,
+    "types": ["ドラゴン", "ひこう"],
+    "stats": {
+      "hp": 95,
+      "attack": 135,
+      "defense": 80,
+      "specialAttack": 110,
+      "specialDefense": 80,
+      "speed": 100
+    },
+    "evolution": {
+      "stepsBefore": 2,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["salamence", "salamence-mega"]
+  },
+  {
+    "number": 374,
+    "name": "ダンバル",
+    "generation": 3,
+    "heightM": 0.6,
+    "weightKg": 95.2,
+    "types": ["はがね", "エスパー"],
+    "stats": {
+      "hp": 40,
+      "attack": 55,
+      "defense": 80,
+      "specialAttack": 35,
+      "specialDefense": 60,
+      "speed": 30
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 2,
+      "branches": 1
+    },
+    "varieties": ["beldum"]
+  },
+  {
+    "number": 375,
+    "name": "メタング",
+    "generation": 3,
+    "heightM": 1.2,
+    "weightKg": 202.5,
+    "types": ["はがね", "エスパー"],
+    "stats": {
+      "hp": 60,
+      "attack": 75,
+      "defense": 100,
+      "specialAttack": 55,
+      "specialDefense": 80,
+      "speed": 50
+    },
+    "evolution": {
+      "stepsBefore": 1,
+      "stepsAfter": 1,
+      "branches": 1
+    },
+    "varieties": ["metang"]
+  },
+  {
+    "number": 376,
+    "name": "メタグロス",
+    "generation": 3,
+    "heightM": 1.6,
+    "weightKg": 550,
+    "types": ["はがね", "エスパー"],
+    "stats": {
+      "hp": 80,
+      "attack": 135,
+      "defense": 130,
+      "specialAttack": 95,
+      "specialDefense": 90,
+      "speed": 70
+    },
+    "evolution": {
+      "stepsBefore": 2,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["metagross", "metagross-mega"]
+  },
+  {
+    "number": 377,
+    "name": "レジロック",
+    "generation": 3,
+    "heightM": 1.7,
+    "weightKg": 230,
+    "types": ["いわ"],
+    "stats": {
+      "hp": 80,
+      "attack": 100,
+      "defense": 200,
+      "specialAttack": 50,
+      "specialDefense": 100,
+      "speed": 50
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["regirock"]
+  },
+  {
+    "number": 378,
+    "name": "レジアイス",
+    "generation": 3,
+    "heightM": 1.8,
+    "weightKg": 175,
+    "types": ["こおり"],
+    "stats": {
+      "hp": 80,
+      "attack": 50,
+      "defense": 100,
+      "specialAttack": 100,
+      "specialDefense": 200,
+      "speed": 50
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["regice"]
+  },
+  {
+    "number": 379,
+    "name": "レジスチル",
+    "generation": 3,
+    "heightM": 1.9,
+    "weightKg": 205,
+    "types": ["はがね"],
+    "stats": {
+      "hp": 80,
+      "attack": 75,
+      "defense": 150,
+      "specialAttack": 75,
+      "specialDefense": 150,
+      "speed": 50
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["registeel"]
+  },
+  {
+    "number": 380,
+    "name": "ラティアス",
+    "generation": 3,
+    "heightM": 1.4,
+    "weightKg": 40,
+    "types": ["ドラゴン", "エスパー"],
+    "stats": {
+      "hp": 80,
+      "attack": 80,
+      "defense": 90,
+      "specialAttack": 110,
+      "specialDefense": 130,
+      "speed": 110
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["latias", "latias-mega"]
+  },
+  {
+    "number": 381,
+    "name": "ラティオス",
+    "generation": 3,
+    "heightM": 2,
+    "weightKg": 60,
+    "types": ["ドラゴン", "エスパー"],
+    "stats": {
+      "hp": 80,
+      "attack": 90,
+      "defense": 80,
+      "specialAttack": 130,
+      "specialDefense": 110,
+      "speed": 110
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["latios", "latios-mega"]
+  },
+  {
+    "number": 382,
+    "name": "カイオーガ",
+    "generation": 3,
+    "heightM": 4.5,
+    "weightKg": 352,
+    "types": ["みず"],
+    "stats": {
+      "hp": 100,
+      "attack": 100,
+      "defense": 90,
+      "specialAttack": 150,
+      "specialDefense": 140,
+      "speed": 90
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["kyogre", "kyogre-primal"]
+  },
+  {
+    "number": 383,
+    "name": "グラードン",
+    "generation": 3,
+    "heightM": 3.5,
+    "weightKg": 950,
+    "types": ["じめん"],
+    "stats": {
+      "hp": 100,
+      "attack": 150,
+      "defense": 140,
+      "specialAttack": 100,
+      "specialDefense": 90,
+      "speed": 90
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["groudon", "groudon-primal"]
+  },
+  {
+    "number": 384,
+    "name": "レックウザ",
+    "generation": 3,
+    "heightM": 7,
+    "weightKg": 206.5,
+    "types": ["ドラゴン", "ひこう"],
+    "stats": {
+      "hp": 105,
+      "attack": 150,
+      "defense": 90,
+      "specialAttack": 150,
+      "specialDefense": 90,
+      "speed": 95
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["rayquaza", "rayquaza-mega"]
+  },
+  {
+    "number": 385,
+    "name": "ジラーチ",
+    "generation": 3,
+    "heightM": 0.3,
+    "weightKg": 1.1,
+    "types": ["はがね", "エスパー"],
+    "stats": {
+      "hp": 100,
+      "attack": 100,
+      "defense": 100,
+      "specialAttack": 100,
+      "specialDefense": 100,
+      "speed": 100
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": ["jirachi"]
+  },
+  {
+    "number": 386,
+    "name": "デオキシス",
+    "generation": 3,
+    "heightM": 1.7,
+    "weightKg": 60.8,
+    "types": ["エスパー"],
+    "stats": {
+      "hp": 50,
+      "attack": 150,
+      "defense": 50,
+      "specialAttack": 150,
+      "specialDefense": 50,
+      "speed": 150
+    },
+    "evolution": {
+      "stepsBefore": 0,
+      "stepsAfter": 0,
+      "branches": 0
+    },
+    "varieties": [
+      "deoxys-normal",
+      "deoxys-attack",
+      "deoxys-defense",
+      "deoxys-speed"
+    ]
+  }
+]
