@@ -9,7 +9,9 @@
     "lint": "biome check",
     "format": "biome format --write",
     "typecheck": "next typegen && tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "data:fetch": "node scripts/question-data/fetch-facts.ts",
+    "data:build": "node scripts/question-data/build-questions.ts && biome format --write public/data/questions data/question-sources"
   },
   "dependencies": {
     "next": "16.4.5",
