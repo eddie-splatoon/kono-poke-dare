@@ -1,15 +1,19 @@
-import { mkdtemp, rm, writeFile } from "node:fs/promises";
+import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { checkQuestionData } from "./check-question-data";
+import { loadQuestions } from "./question-data/load-questions.ts";
 
-/** 全種類のデータが完成したら(#16)、1025 にする。 */
-const EXPECTED_QUESTION_COUNT = 6;
+/** 世代ごとに増やし、全種類のデータが完成したら(#16)、1025 にする。 */
+const EXPECTED_QUESTION_COUNT = 151;
 
 const PUBLIC_DIRECTORY = fileURLToPath(
   new URL("../public/data/questions", import.meta.url),
+);
+const SOURCE_DIRECTORY = fileURLToPath(
+  new URL("../data/question-sources", import.meta.url),
 );
 
 function makeQuestion(number: number) {
@@ -29,6 +33,21 @@ describe("配信するデータ", () => {
     await expect(
       checkQuestionData(PUBLIC_DIRECTORY, EXPECTED_QUESTION_COUNT),
     ).resolves.toEqual([]);
+  });
+
+  it("R-69: ソースから生成した問題と一致する", async () => {
+    const questions = await loadQuestions(SOURCE_DIRECTORY);
+
+    expect(questions).toHaveLength(EXPECTED_QUESTION_COUNT);
+    for (const question of questions) {
+      const published = JSON.parse(
+        await readFile(
+          join(PUBLIC_DIRECTORY, fileNameOf(question.number)),
+          "utf8",
+        ),
+      );
+      expect(published).toEqual(question);
+    }
   });
 });
 
