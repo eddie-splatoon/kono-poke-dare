@@ -42,5 +42,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# PokeAPI の応答のキャッシュ
+/.cache/
+
 # git worktree
 /.claude/worktrees/

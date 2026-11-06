@@ -17,13 +17,15 @@ pnpm install
 pnpm dev
 ```
 
-| コマンド         | 内容                                   |
-| ---------------- | -------------------------------------- |
-| `pnpm lint`      | Biome による lint とフォーマットの確認 |
-| `pnpm typecheck` | 型チェック                             |
-| `pnpm test`      | Vitest によるテスト                    |
-| `pnpm build`     | 本番ビルド                             |
-| `pnpm e2e`       | `out/` に対する Playwright のテスト    |
+| コマンド                 | 内容                                                         |
+| ------------------------ | ------------------------------------------------------------ |
+| `pnpm lint`              | Biome による lint とフォーマットの確認                       |
+| `pnpm typecheck`         | 型チェック                                                   |
+| `pnpm test`              | Vitest によるテスト                                          |
+| `pnpm build`             | 本番ビルド                                                   |
+| `pnpm e2e`               | `out/` に対する Playwright のテスト                          |
+| `pnpm data:fetch <世代>` | PokeAPI から世代(1〜9)の事実を取得する(手元で手動で実行する) |
+| `pnpm data:build`        | 事実と手書きデータから配信データを生成する                   |
 
 `pnpm e2e` の前に `pnpm build` を実行します。初回は `pnpm exec playwright install chromium` でブラウザも取得します。worktree を並列で使うときは、`E2E_PORT` でポートを分けます。
 
