@@ -81,7 +81,7 @@
                     "message": "domain 層はフレームワークに依存できません。"
                   },
                   {
-                    "group": ["../**"],
+                    "group": ["..", "../**", "./..", "./../**"],
                     "message": "親方向の相対 import は使えません。@/ で書いてください。"
                   }
                 ]
@@ -125,7 +125,7 @@
                     "message": "application 層はフレームワークに依存できません。"
                   },
                   {
-                    "group": ["../**"],
+                    "group": ["..", "../**", "./..", "./../**"],
                     "message": "親方向の相対 import は使えません。@/ で書いてください。"
                   }
                 ]
@@ -156,7 +156,7 @@
                     "message": "infrastructure 層から import できない層です。.claude/skills/coding-standards/references/architecture.md の依存方向に従ってください。"
                   },
                   {
-                    "group": ["../**"],
+                    "group": ["..", "../**", "./..", "./../**"],
                     "message": "親方向の相対 import は使えません。@/ で書いてください。"
                   }
                 ]
@@ -187,7 +187,7 @@
                     "message": "composition 層から import できない層です。.claude/skills/coding-standards/references/architecture.md の依存方向に従ってください。"
                   },
                   {
-                    "group": ["../**"],
+                    "group": ["..", "../**", "./..", "./../**"],
                     "message": "親方向の相対 import は使えません。@/ で書いてください。"
                   }
                 ]
@@ -220,7 +220,7 @@
                     "message": "components 層から import できない層です。.claude/skills/coding-standards/references/architecture.md の依存方向に従ってください。"
                   },
                   {
-                    "group": ["../**"],
+                    "group": ["..", "../**", "./..", "./../**"],
                     "message": "親方向の相対 import は使えません。@/ で書いてください。"
                   }
                 ]
@@ -249,7 +249,7 @@
                     "message": "app 層から import できない層です。.claude/skills/coding-standards/references/architecture.md の依存方向に従ってください。"
                   },
                   {
-                    "group": ["../**"],
+                    "group": ["..", "../**", "./..", "./../**"],
                     "message": "親方向の相対 import は使えません。@/ で書いてください。"
                   }
                 ]

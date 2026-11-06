@@ -76,6 +76,12 @@ function lintImport(layer: string, source: string) {
   });
 }
 
+function expectRestricted(layer: string, source: string) {
+  const result = lintImport(layer, source);
+  expect(result.stdout + result.stderr).toContain("noRestrictedImports");
+  expect(result.status).toBe(1);
+}
+
 describe("biome.json の層の禁止 import", () => {
   beforeAll(() => {
     tmp = mkdtempSync(join(tmpdir(), "import-boundaries-"));
@@ -92,22 +98,22 @@ describe("biome.json の層の禁止 import", () => {
   it.each(["@/infrastructure", "@/infrastructure/indexed-db"])(
     "R-7: domain から %s を import すると失敗する",
     (source) => {
-      expect(lintImport("domain", source).status).toBe(1);
+      expectRestricted("domain", source);
     },
   );
 
   it.each(["next", "next/link"])(
     "R-8: domain から %s を import すると失敗する",
     (source) => {
-      expect(lintImport("domain", source).status).toBe(1);
+      expectRestricted("domain", source);
     },
   );
 
   it.each(cases(FORBIDDEN))(
     "R-9: %s から %s を import すると失敗する",
     (layer, source) => {
-      expect(lintImport(layer, source).status).toBe(1);
-      expect(lintImport(layer, `${source}/sub`).status).toBe(1);
+      expectRestricted(layer, source);
+      expectRestricted(layer, `${source}/sub`);
     },
   );
 
@@ -125,8 +131,15 @@ describe("biome.json の層の禁止 import", () => {
   it.each(Object.keys(FORBIDDEN))(
     "R-10: %s で親方向の相対 import を書くと失敗する",
     (layer) => {
-      expect(lintImport(layer, "../x").status).toBe(1);
-      expect(lintImport(layer, "../../infrastructure/x").status).toBe(1);
+      for (const source of [
+        "..",
+        "../x",
+        "../../infrastructure/x",
+        "./..",
+        "./../x",
+      ]) {
+        expectRestricted(layer, source);
+      }
     },
   );
 });
