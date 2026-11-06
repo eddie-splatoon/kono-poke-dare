@@ -27,7 +27,7 @@ Closes #
 
 <!-- 実行したコマンドや、画面で確認した内容を書く -->
 
-- [ ] `pnpm lint` / `pnpm typecheck` / `pnpm test` / `pnpm build` が通る
+- [ ] `pnpm lint` / `pnpm typecheck` / `pnpm test` / `pnpm build` / `pnpm e2e` が通る
 
 ## 規約チェック
 

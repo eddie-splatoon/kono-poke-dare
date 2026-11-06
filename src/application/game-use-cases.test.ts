@@ -183,6 +183,12 @@ describe("skipHint", () => {
 });
 
 describe("GameView", () => {
+  it("R-40: maxHints はヒントの総数である", async () => {
+    const { view } = await start();
+
+    expect(view.maxHints).toBe(MAX_HINTS);
+  });
+
   it("R-33: visibleHints は現在のヒントまでだけを含む", async () => {
     const { game, view } = await start();
     const { hints } = makeQuestion(game.questionNumber);

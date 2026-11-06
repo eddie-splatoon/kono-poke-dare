@@ -1,7 +1,7 @@
 ---
 title: 出題、進行、回答判定
 status: implemented
-issues: [12, 13, 14]
+issues: [12, 13, 14, 17]
 code:
   - src/domain/calendar/jst-date.ts
   - src/domain/schedule/daily-question.ts
@@ -19,7 +19,7 @@ tests:
   - src/domain/answer/normalize-answer.test.ts
   - src/domain/game/game-progress.test.ts
   - src/application/game-use-cases.test.ts
-updated: 2026-11-05
+updated: 2026-11-06
 ---
 
 # 出題、進行、回答判定
@@ -71,6 +71,7 @@ updated: 2026-11-05
 | R-37 | 問題が見つからなければ `QuestionNotFoundError` にする                                        |
 | R-38 | 終了したゲームにユースケースで回答や次へ進む操作をすると `GameFinishedError` にする          |
 | R-39 | 問題数 1025 の通算日 0〜4 の問題番号は、順に 289、760、111、551、34 である(出題順を固定する) |
+| R-40 | ビューの `maxHints` は、ヒントの総数(`MAX_HINTS`)である                                      |
 
 ## ドメインルール
 
@@ -120,6 +121,7 @@ updated: 2026-11-05
 | `date`         | `string`                      | `YYYY-MM-DD`(JST)                      |
 | `status`       | `playing`、`won`、`lost`      | 進行の状態                             |
 | `hintNumber`   | `number`                      | 現在のヒント番号。`lost` では 10       |
+| `maxHints`     | `number`                      | ヒントの総数(10)                       |
 | `visibleHints` | `readonly string[]`           | 現在のヒントまでの本文                 |
 | `score`        | `number`、`null`              | 終了後の得点。進行中は `null`          |
 | `answer`       | `string`、`null`              | 終了後の正解の名前。進行中は `null`    |
@@ -145,4 +147,4 @@ updated: 2026-11-05
 
 - 保存、再開するゲームの選択(`records.md`)
 - 問題データの形式の検証(`docs/specs/quiz-data.md`)と中身(#16)
-- 画面(#17)
+- 画面(`docs/specs/game-screen.md`)

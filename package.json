@@ -10,6 +10,7 @@
     "format": "biome format --write",
     "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest run",
+    "e2e": "playwright test",
     "data:fetch": "node scripts/question-data/fetch-facts.ts",
     "data:build": "node scripts/question-data/build-questions.ts && biome format --write public/data/questions data/question-sources"
   },
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.6.5",
+    "@playwright/test": "1.64.1",
     "@tailwindcss/turbopack": "^4",
     "@types/node": "^24.19.2",
     "@types/react": "^19",

@@ -20,7 +20,7 @@
 | `infrastructure`     | 統合テスト                    | IndexedDB の実物に近い環境で確認する。日付キーの重複防止と、不正な保存値の扱いもここで確かめる |
 | `app` / `components` | Playwright で主要な操作を確認 | ロジックは内側の層に置き、ここには持たせない                                 |
 
-Playwright はまだ導入していない(#1 の残作業)。導入までは、画面の確認結果を PR の「動作確認」に書く。
+Playwright のテストは `e2e/*.spec.ts` に置く。公開するものと同じ `out/` を `basePath` の下で配信して確かめるので、先に `pnpm build` を実行する。
 
 ## テストの書き方
 
@@ -41,6 +41,9 @@ it("R-1: ヒントが進むごとに 100 から 10 ずつ下がる", () => {
 
 ```sh
 pnpm test
+pnpm build && pnpm e2e
 ```
+
+初めて `pnpm e2e` を実行する前に、`pnpm exec playwright install chromium` でブラウザを取得する。
 
 カバレッジのしきい値は、今は定めない(ツールが未導入のため)。

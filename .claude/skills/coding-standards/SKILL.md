@@ -45,4 +45,4 @@ Issue → worktree 作成 → 仕様 → Red → Green → Refactor → PR → �
 - [ ] `/security-review` を実行し、指摘に対応した
 - [ ] `docs/specs/` の仕様と索引がコードと一致している
 - [ ] 公式の画像、ロゴ、音声を追加していない
-- [ ] `pnpm lint` / `pnpm typecheck` / `pnpm test` / `pnpm build` がすべて通る
+- [ ] `pnpm lint` / `pnpm typecheck` / `pnpm test` / `pnpm build` / `pnpm e2e` がすべて通る

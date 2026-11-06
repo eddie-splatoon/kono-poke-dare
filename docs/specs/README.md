@@ -13,3 +13,4 @@
 | 問題データの形式と検証 | implemented | [quiz-data.md](quiz-data.md)         |
 | worktree の補助ツール | implemented | [worktree-tool.md](worktree-tool.md) |
 | 記録の保存           | implemented | [records.md](records.md)             |
+| ゲーム画面           | implemented | [game-screen.md](game-screen.md)     |
