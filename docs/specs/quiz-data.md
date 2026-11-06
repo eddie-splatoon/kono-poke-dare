@@ -166,6 +166,7 @@ PokeAPI → .cache/pokeapi/(コミットしない) → data/question-sources/fac
 ```
 
 - 生成した文が名前を含んで検証を通らないときは、手書きデータの `overrides` で該当のヒントだけ書き換える
+- PokeAPI のデータが事実と異なるときも、`overrides` で書き換える。系統に進化の条件がない組み合わせ(フィオネとマナフィ)は、進化しないものとして扱う
 - 取得(`pnpm data:fetch <世代>`)は手元で手動で実行する。CI とゲームは PokeAPI と通信しない
 - 取得は順番に間隔を空けて行い、応答をキャッシュする(PokeAPI の Fair Use Policy)
 
