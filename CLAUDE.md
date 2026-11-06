@@ -6,6 +6,8 @@
 
 `pnpm lint` / `pnpm typecheck` / `pnpm test` / `pnpm build` / `pnpm e2e` がすべて通ることを、PR の前に確認する。CI(`.github/workflows/ci.yml`)でも同じ内容を実行する。
 
+`pnpm lint` はオニオンの層をまたぐ禁止 import も検出する。PR 本文の Issue への参照は `.github/workflows/issue-link.yml` が確認する。
+
 ## コーディング規約
 
 実装、設計、Issue の起票、PR の作成、レビューの前に、必ず `coding-standards` Skill(`.claude/skills/coding-standards/SKILL.md`)を読んで従う。

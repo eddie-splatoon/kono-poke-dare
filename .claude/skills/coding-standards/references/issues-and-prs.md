@@ -44,6 +44,7 @@ PR には最低 1 つの Issue を、本文でひも付ける。
 | Issue の一部だけに対応する | `Refs #N`   |
 
 - 例外は Dependabot の PR のみ
+- `.github/workflows/issue-link.yml` が本文を確認し、参照がなければ失敗する。`close`、`fix`、`resolve` の活用形と `ref`、`refs` に `#番号` が続く形を受け付ける。HTML コメントとコードの中の参照、URL、他リポジトリの参照は数えない
 - テンプレートの項目を埋める
 - 1 つの PR に、関係のない変更を混ぜない
 
