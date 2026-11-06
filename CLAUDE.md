@@ -18,6 +18,7 @@
 - 新規機能は実装前に Issue を起票する。大きな作業は Sub Issue に分け、PR は最低 1 つの Issue にひも付ける
 - 機能仕様を `docs/specs/` に記録する
 - 実装開始時に `scripts/worktree.sh new <branch>` で Git worktree を作り、PR のマージ時に `scripts/worktree.sh clean` で削除する。親のチェックアウトで直接開発しない
+- 既存の問題データを全世代にわたって変更するときは、`parallel-data-change` Skill(`.claude/skills/parallel-data-change/SKILL.md`)に従う
 
 ## 操作アカウント
 

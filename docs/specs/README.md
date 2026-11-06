@@ -16,3 +16,4 @@
 | ゲーム画面           | implemented | [game-screen.md](game-screen.md)     |
 | コーディング規約の機械的な確認 | implemented | [coding-standards-enforcement.md](coding-standards-enforcement.md) |
 | データの扱いの説明ページ | implemented | [about-page.md](about-page.md) |
+| 問題データの並列変更 | implemented | [parallel-data-change.md](parallel-data-change.md) |

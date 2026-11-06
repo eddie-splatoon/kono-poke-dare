@@ -47,3 +47,6 @@ next-env.d.ts
 
 # git worktree
 /.claude/worktrees/
+
+# 問題データの並列変更の実行の記録
+/.claude/runs/
