@@ -1,0 +1,27 @@
+name: 権利者の方からのご連絡
+description: 権利に関するご連絡を受け付ける。内容は公開されるので、個人情報を書かない
+labels: [legal]
+body:
+  - type: markdown
+    attributes:
+      value: このフォームの内容は、公開の Issue になります。住所、電話番号など、公開されて困る情報は書かないでください。
+  - type: input
+    id: rights-holder
+    attributes:
+      label: 権利者の名称
+      description: 代理の方は、代理であることも書いてください
+    validations:
+      required: true
+  - type: textarea
+    id: target
+    attributes:
+      label: 対象の箇所
+      description: 問題の番号、ページの URL、内容など
+    validations:
+      required: true
+  - type: textarea
+    id: request
+    attributes:
+      label: ご希望の対応
+    validations:
+      required: true

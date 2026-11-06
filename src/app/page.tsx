@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { RIGHTS_FORM_URL } from "./contact";
 import { GameClient } from "./game-client";
 
 export default function Home() {
@@ -9,15 +11,20 @@ export default function Home() {
       </header>
       <GameClient />
       <footer className="mt-auto text-center text-sm opacity-70">
-        非公式のファン作品です。権利者とは関係ありません。
-        権利者の方からのご連絡は、
-        <a
-          className="underline"
-          href="https://github.com/eddie-splatoon/kono-poke-dare/issues"
-        >
-          GitHub の Issue
-        </a>
-        で受け付けます。
+        <p>
+          {/* たまに開くだけのページなので、遊んでいる間に事前取得しない。 */}
+          <Link className="underline" href="/about" prefetch={false}>
+            データの扱いと権利について
+          </Link>
+        </p>
+        <p>
+          非公式のファン作品です。権利者とは関係ありません。
+          権利者の方からのご連絡は、
+          <a className="underline" href={RIGHTS_FORM_URL}>
+            専用のフォーム
+          </a>
+          で受け付けます。
+        </p>
       </footer>
     </main>
   );
