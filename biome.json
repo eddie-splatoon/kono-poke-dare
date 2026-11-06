@@ -43,5 +43,221 @@
         "organizeImports": "on"
       }
     }
-  }
+  },
+  "overrides": [
+    {
+      "includes": ["src/domain/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": [
+                      "@/application",
+                      "@/application/**",
+                      "@/infrastructure",
+                      "@/infrastructure/**",
+                      "@/composition",
+                      "@/composition/**",
+                      "@/app",
+                      "@/app/**",
+                      "@/components",
+                      "@/components/**"
+                    ],
+                    "message": "domain 層から import できない層です。.claude/skills/coding-standards/references/architecture.md の依存方向に従ってください。"
+                  },
+                  {
+                    "group": [
+                      "next",
+                      "next/**",
+                      "react",
+                      "react/**",
+                      "react-dom",
+                      "react-dom/**"
+                    ],
+                    "message": "domain 層はフレームワークに依存できません。"
+                  },
+                  {
+                    "group": ["../**"],
+                    "message": "親方向の相対 import は使えません。@/ で書いてください。"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/application/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": [
+                      "@/infrastructure",
+                      "@/infrastructure/**",
+                      "@/composition",
+                      "@/composition/**",
+                      "@/app",
+                      "@/app/**",
+                      "@/components",
+                      "@/components/**"
+                    ],
+                    "message": "application 層から import できない層です。.claude/skills/coding-standards/references/architecture.md の依存方向に従ってください。"
+                  },
+                  {
+                    "group": [
+                      "next",
+                      "next/**",
+                      "react",
+                      "react/**",
+                      "react-dom",
+                      "react-dom/**"
+                    ],
+                    "message": "application 層はフレームワークに依存できません。"
+                  },
+                  {
+                    "group": ["../**"],
+                    "message": "親方向の相対 import は使えません。@/ で書いてください。"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/infrastructure/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": [
+                      "@/composition",
+                      "@/composition/**",
+                      "@/app",
+                      "@/app/**",
+                      "@/components",
+                      "@/components/**"
+                    ],
+                    "message": "infrastructure 層から import できない層です。.claude/skills/coding-standards/references/architecture.md の依存方向に従ってください。"
+                  },
+                  {
+                    "group": ["../**"],
+                    "message": "親方向の相対 import は使えません。@/ で書いてください。"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/composition/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": [
+                      "@/domain",
+                      "@/domain/**",
+                      "@/app",
+                      "@/app/**",
+                      "@/components",
+                      "@/components/**"
+                    ],
+                    "message": "composition 層から import できない層です。.claude/skills/coding-standards/references/architecture.md の依存方向に従ってください。"
+                  },
+                  {
+                    "group": ["../**"],
+                    "message": "親方向の相対 import は使えません。@/ で書いてください。"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/components/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": [
+                      "@/domain",
+                      "@/domain/**",
+                      "@/infrastructure",
+                      "@/infrastructure/**",
+                      "@/composition",
+                      "@/composition/**",
+                      "@/app",
+                      "@/app/**"
+                    ],
+                    "message": "components 層から import できない層です。.claude/skills/coding-standards/references/architecture.md の依存方向に従ってください。"
+                  },
+                  {
+                    "group": ["../**"],
+                    "message": "親方向の相対 import は使えません。@/ で書いてください。"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/app/**"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noRestrictedImports": {
+              "level": "error",
+              "options": {
+                "patterns": [
+                  {
+                    "group": [
+                      "@/domain",
+                      "@/domain/**",
+                      "@/infrastructure",
+                      "@/infrastructure/**"
+                    ],
+                    "message": "app 層から import できない層です。.claude/skills/coding-standards/references/architecture.md の依存方向に従ってください。"
+                  },
+                  {
+                    "group": ["../**"],
+                    "message": "親方向の相対 import は使えません。@/ で書いてください。"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
 }
