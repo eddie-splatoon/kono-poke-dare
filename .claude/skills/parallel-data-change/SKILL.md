@@ -62,10 +62,10 @@ flowchart TD
 
 ## 3. 並列実行
 
-世代ごとに、次の手順でワーカーを起動する。同時に動かすのは 4 つまでにする。
+パイロットの結果を `brief.md` と `decisions.md` に反映してから、パイロットで処理した世代を除く世代ごとに、次の手順でワーカーを起動する。同時に動かすのは 4 つまでにする。
 
 1. 親のチェックアウトで `scripts/worktree.sh new <type>/<topic>-gen<N>` を順番に実行する。`--base` は既定の `origin/main` のままにする
-2. `Agent` を `subagent_type: "shard-worker"`、`run_in_background: true` で起動する。プロンプトで `generation`、`worktree`、`run_dir` を渡す
+2. `Agent` を `subagent_type: "shard-worker"`、`run_in_background: true` で起動する。プロンプトで `generation`、`worktree`、`run_dir`、`commit_trailer` を渡す。`commit_trailer` には、司令塔のセッションで指定されているコミットの帰属の行を渡す。指定がなければ「なし」と渡す
 3. 返された agentId を `status.md` に書く
 
 定義が読み込まれていないセッションでは、`general-purpose` に `.claude/agents/shard-worker.md` を読ませて起動する。
@@ -81,7 +81,7 @@ flowchart TD
    | 内容                                 | 判断する人 | 対応                                                                |
    | ------------------------------------ | ---------- | ------------------------------------------------------------------- |
    | 表記や手順の統一                     | 司令塔     | `D-n` を追記する                                                    |
-   | 検証、生成、仕様の修正が必要         | 司令塔     | 影響するワーカーを止め、修正の PR をマージし、`git merge origin/main` を指示する |
+   | 検証、生成、仕様の修正が必要         | 司令塔     | 影響するワーカーを止め、修正の PR をマージする。親のチェックアウトで `git fetch origin` を実行してから、ワーカーに `git merge origin/main` を指示する(ワーカーは fetch しない) |
    | 出題の方針や難易度など、仕様の意図   | ユーザー   | `AskUserQuestion` で確認してから `D-n` を追記する                   |
 
 4. `decisions.md` に追記してから、影響するワーカーへ送る。実行中のワーカーにも完了済みのワーカーにも、agentId 宛の `SendMessage` で送る。完了済みのワーカーは、これで再開する
@@ -93,13 +93,15 @@ flowchart TD
 
 ## 4. ゲート
 
-世代ごとに確認する。
+世代ごとに、次の順で確認する。`pnpm` はワーカーが変更できる worktree のコードを司令塔の権限で実行するので、手順 1〜3 を通るまで実行しない。`data:scope` が書き換えられていても気づけるように、手順 2 は Git の出力を司令塔が直接読む。
 
 1. `(cd <worktree> && git status --short)` が空である
-2. `(cd <worktree> && pnpm data:scope <N>)` が成功する
-3. `(cd <worktree> && pnpm vitest run scripts/check-question-data.test.ts)` が成功する
-4. 全世代の決定 `D-n` が適用されている
-5. 手書きの文を変更した世代は、`shard-reviewer` がすべて確認し、`error` がない。`uncertain` は司令塔が判断する
+2. `(cd <worktree> && git diff --name-only origin/main...HEAD)` が、担当の `hand-written/gen-<N>.json` と、その世代の `public/data/questions/NNNN.json` だけである
+3. `(cd <worktree> && git status --short --ignored)` に、依存とビルドの出力(`node_modules/`、`.next/`、`out/`、`test-results/`、`playwright-report/`、`next-env.d.ts`、`*.tsbuildinfo`)以外の無視されたファイルがない。`data:scope` は無視されたファイルを検出しない
+4. `(cd <worktree> && pnpm data:scope <N>)` が成功する
+5. `(cd <worktree> && pnpm vitest run scripts/check-question-data.test.ts)` が成功する
+6. 全世代の決定 `D-n` が適用されている
+7. 手書きの文を変更した世代は、`shard-reviewer` がすべて確認し、`error` がない。`uncertain` は司令塔が判断する
 
 `cross_generation` の指摘は、「課題の処理」に戻す。
 

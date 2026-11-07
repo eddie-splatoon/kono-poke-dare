@@ -14,6 +14,7 @@ model: sonnet
 - `generation`: 担当の世代
 - `worktree`: 担当の worktree の絶対パス
 - `run_dir`: `brief.md` と `decisions.md` がある実行の記録の絶対パス
+- `commit_trailer`: コミットの帰属の行。「なし」なら付けません
 
 ## 作業の場所
 
@@ -49,7 +50,7 @@ model: sonnet
    - `git commit` します
 4. 最後にもう一度、手順 3 の確認をすべて行います。後回しにした種族が残っていれば、完了と報告しません
 
-コミットのメッセージの末尾には、`Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>` を付けます。
+コミットのメッセージの末尾には、`commit_trailer` をそのまま付けます。
 
 ## 報告
 
