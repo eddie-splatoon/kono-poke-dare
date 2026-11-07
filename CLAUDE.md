@@ -2,49 +2,13 @@
 
 @AGENTS.md
 
-## 開発コマンド
+## Claude Code 固有の設定
 
-`pnpm lint` / `pnpm typecheck` / `pnpm test` / `pnpm build` / `pnpm e2e` がすべて通ることを、PR の前に確認する。CI(`.github/workflows/ci.yml`)でも同じ内容を実行する。
+`.claude/settings.json` の SessionStart フックが、セッションの `GH_TOKEN` を `eddie-splatoon` のトークンに設定する。共通の GitHub アカウント規則は `AGENTS.md` を参照する。
 
-`pnpm lint` はオニオンの層をまたぐ禁止 import も検出する。PR 本文の Issue への参照は `.github/workflows/issue-link.yml` が確認する。
+`.claude/agents/` の `shard-worker` と `shard-reviewer` は Claude Code 用のサブエージェント定義。既存問題データを全世代にわたって変更するときは、`parallel-data-change` Skill と合わせて使用する。
 
-## コーディング規約
-
-実装、設計、Issue の起票、PR の作成、レビューの前に、必ず `coding-standards` Skill(`.claude/skills/coding-standards/SKILL.md`)を読んで従う。
-
-- オニオンアーキテクチャで実装する
-- TDD で開発する
-- セキュアコードを保つ
-- 新規機能は実装前に Issue を起票する。大きな作業は Sub Issue に分け、PR は最低 1 つの Issue にひも付ける
-- 機能仕様を `docs/specs/` に記録する
-- 実装開始時に `scripts/worktree.sh new <branch>` で Git worktree を作り、PR のマージ時に `scripts/worktree.sh clean` で削除する。親のチェックアウトで直接開発しない
-- 既存の問題データを全世代にわたって変更するときは、`parallel-data-change` Skill(`.claude/skills/parallel-data-change/SKILL.md`)に従う
-
-## 操作アカウント
-
-このリポジトリのコミット、PR、Issue はすべて `eddie-splatoon` 名義にする。他の人間のアカウント名やメールアドレスを、コミット履歴、PR、Issue、リポジトリ内のファイルに書かない。
-
-`gh auth switch` は他のリポジトリにも影響するので使わない。
-
-### Claude Code
-
-`.claude/settings.json` の SessionStart フックが、セッションの `GH_TOKEN` を `eddie-splatoon` のトークンに設定する。
-
-作業前に `gh api user --jq .login` の結果が `eddie-splatoon` であることを確認する。別のアカウントが表示されたら、`gh` と `git push` を実行せず、原因を解消する。
-
-### 手元のターミナル
-
-`git push` はリポジトリの credential helper が `eddie-splatoon` を使う。`gh` は次のようにアカウントを指定して実行する。
-
-```sh
-GH_TOKEN="$(gh auth token --user eddie-splatoon)" gh pr create
-```
-
-### IDE
-
-GitHub 連携の既定アカウントを `eddie-splatoon` にしてから、PR の作成やレビューを行う。
-
-### clone し直したとき
+## clone し直したとき
 
 Git のローカル設定はリポジトリに含まれないので、もう一度設定する。`gh` のパスは環境に合わせる。
 
@@ -56,7 +20,7 @@ git config --local --replace-all credential.https://github.com.helper ''
 git config --local --add credential.https://github.com.helper '!f() { test "$1" = get || exit 0; token="$(/opt/homebrew/bin/gh auth token --user eddie-splatoon)" || exit 1; echo username=eddie-splatoon; echo "password=$token"; }; f'
 ```
 
-### CI
+## CI
 
 `.github/workflows/identity.yml` が PR ごとに次の内容を確認する。
 
