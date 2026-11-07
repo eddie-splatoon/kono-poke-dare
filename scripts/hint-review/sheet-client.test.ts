@@ -67,8 +67,8 @@ describe("hintsVersion", () => {
 describe("summarizeRecord", () => {
   it("R-8: NA の観点は total と min_score から除外する", () => {
     expect(
-      summarizeRecord(record(FIRST, [5, "NA", 3, 4, "NA", 5, 5]), IDS),
-    ).toMatchObject({ total: 22, minScore: 3, complete: true });
+      summarizeRecord(record(FIRST, [5, "NA", 3, 4, "NA", 5]), IDS),
+    ).toMatchObject({ total: 17, minScore: 3, complete: true });
   });
 
   it("R-43: 3 以下の評点があればコメントを求める", () => {
@@ -107,17 +107,16 @@ describe("buildCsv", () => {
       "priority",
       "hints_version",
       "accuracy",
-      "hint6_strength",
+      "hint8_strength",
       "hint9_strength",
       "difficulty_order",
       "wording",
       "redundancy",
-      "name_leak",
       "total",
       "min_score",
       "needs_fix",
       "comment",
-      "hint_6",
+      "hint_8",
       "hint_9",
     ]);
   });
@@ -275,7 +274,7 @@ describe("restoreState", () => {
 
 describe("filterEntries", () => {
   const state = new Map([
-    [1, record(FIRST, [5, 5, 5, 5, 5, 5, 5])],
+    [1, record(FIRST, [5, 5, 5, 5, 5, 5])],
     [2, record(SECOND, [1])],
   ]);
   const numbers = (filter: object) =>
@@ -301,9 +300,9 @@ describe("filterEntries", () => {
 describe("progressOf", () => {
   it("R-25: 全観点が揃った種族の数を全体と世代ごとに返す", () => {
     const state = new Map([
-      [1, record(FIRST, [5, 5, 5, 5, 5, 5, "NA"])],
+      [1, record(FIRST, [5, 5, 5, 5, 5, "NA"])],
       [2, record(SECOND, [1])],
-      [3, record(THIRD, [1, 5, 5, 5, 5, 5, 5])],
+      [3, record(THIRD, [1, 5, 5, 5, 5, 5])],
     ]);
     expect(progressOf(ENTRIES, state, IDS)).toEqual({
       scored: 2,
@@ -326,14 +325,14 @@ describe("キーボード", () => {
     expect(first.record.scores).toEqual({ accuracy: 3 });
     expect(first.complete).toBe(false);
     const second = applyScore(first.record, FIRST.version, IDS, 4);
-    expect(second.record.scores).toEqual({ accuracy: 3, hint6_strength: 4 });
+    expect(second.record.scores).toEqual({ accuracy: 3, hint8_strength: 4 });
   });
 
   it("R-26: 最後の観点を埋めると complete になり、埋まっていれば変えない", () => {
-    const almost = record(FIRST, [5, 5, 5, 5, 5, 5]);
+    const almost = record(FIRST, [5, 5, 5, 5, 5]);
     const done = applyScore(almost, FIRST.version, IDS, 2);
     expect(done.complete).toBe(true);
-    expect(done.record.scores.name_leak).toBe(2);
+    expect(done.record.scores.redundancy).toBe(2);
     expect(applyScore(done.record, FIRST.version, IDS, 5).record).toEqual(
       done.record,
     );

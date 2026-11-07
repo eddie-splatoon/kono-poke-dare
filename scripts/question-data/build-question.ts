@@ -135,9 +135,9 @@ export function buildQuestion(
     `高さは ${facts.heightM.toFixed(1)} m である。`,
     `重さは ${facts.weightKg.toFixed(1)} kg である。`,
     `初めて登場したのは第 ${facts.generation} 世代である。`,
-    handWritten.appearance,
-    typeHint(facts.types),
     evolutionHint(facts.evolution),
+    typeHint(facts.types),
+    handWritten.appearance,
     handWritten.signature,
     nameHint(facts.name),
   ];
