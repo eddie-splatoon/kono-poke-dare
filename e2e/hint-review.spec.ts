@@ -101,7 +101,7 @@ test("R-37: 採点して書き出した CSV を file:// のページからダウ
   const [header, row, ...rest] = csv.replace(/^﻿/, "").trim().split("\r\n");
   expect(rest).toEqual([]);
   expect(header.startsWith("number,name,generation,")).toBe(true);
-  expect(row).toContain(",4,4,4,4,NA,16,4,0,外見に疑い,");
+  expect(row).toContain(",4,4,4,4,NA,4,4,24,4,0,外見に疑い,");
 });
 
 test("R-38: 再読み込みしても採点が残る", async ({ page }) => {
@@ -151,13 +151,11 @@ test("R-40: 絞り込みの結果を 1 ページ 20 件で表示し、ページ�
   await expect(page.getByTestId("card-2")).toContainText("角の本数に疑い");
 });
 
-test("R-41: キーボードで 5 観点を埋めると次のカードへ移る", async ({
-  page,
-}) => {
+test("R-41: キーボードで全観点を埋めると次のカードへ移る", async ({ page }) => {
   await open(page);
-  await page.keyboard.type("54333");
+  await page.keyboard.type("5444444");
   await expect(radio(page, 1, "accuracy", "5")).toBeChecked();
-  await expect(radio(page, 1, "wording", "3")).toBeChecked();
+  await expect(radio(page, 1, "name_leak", "4")).toBeChecked();
   await page.keyboard.type("0");
   await expect(radio(page, 2, "accuracy", "NA")).toBeChecked();
 });
@@ -175,24 +173,26 @@ test("R-42: ヒントが変わった種族は未採点に戻り、その件数�
   await expect(radio(page, 2, "accuracy", "4")).toBeChecked();
 });
 
-test("R-43: 2 以下の評点があってコメントが空なら注意を表示する", async ({
+test("R-43: 3 以下の評点があってコメントが空なら注意を表示する", async ({
   page,
 }) => {
   await open(page);
   const card = page.getByTestId("card-1");
-  const warning = card.getByText("どこを直すかをコメントに書いてください");
+  const warning = card.getByText("どのヒントのどこが問題かを");
   await expect(warning).toBeHidden();
-  await radio(page, 1, "accuracy", "2").check();
+  await radio(page, 1, "accuracy", "4").check();
+  await expect(warning).toBeHidden();
+  await radio(page, 1, "accuracy", "3").check();
   await expect(warning).toBeVisible();
   await card.getByRole("textbox").fill("色が違う");
   await expect(warning).toBeHidden();
 });
 
-test("R-44: キーボードで埋めて 2 以下があれば、コメント欄へ移る", async ({
+test("R-44: キーボードで埋めて 3 以下があれば、コメント欄へ移る", async ({
   page,
 }) => {
   await open(page);
-  await page.keyboard.type("12345");
+  await page.keyboard.type("5535555");
   const comment = page.getByTestId("card-1").getByRole("textbox");
   await expect(comment).toBeFocused();
   await page.keyboard.type("色が違う");
@@ -201,6 +201,25 @@ test("R-44: キーボードで埋めて 2 以下があれば、コメント欄�
   await expect(comment).not.toBeFocused();
   await page.keyboard.type("5");
   await expect(radio(page, 2, "accuracy", "5")).toBeChecked();
+});
+
+test("R-46: 観点を変える前の保存値を引き継がない", async ({ page }) => {
+  await open(page);
+  const version = hintsVersion(fakeEntries()[0].hints);
+  await page.evaluate((recordVersion) => {
+    localStorage.clear();
+    localStorage.setItem(
+      "kono-poke-dare:hint-review:v1",
+      JSON.stringify({
+        records: {
+          1: { version: recordVersion, scores: { accuracy: 4 }, comment: "" },
+        },
+      }),
+    );
+  }, version);
+  await page.reload();
+  await expect(page.getByTestId("card-1")).toBeVisible();
+  await expect(radio(page, 1, "accuracy", "4")).not.toBeChecked();
 });
 
 test("R-45: ページから外部へ通信できない", async ({ page }) => {

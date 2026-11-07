@@ -31,10 +31,12 @@
  */
 
 const NEEDS_FIX_THRESHOLD = 2;
+const NEEDS_COMMENT_THRESHOLD = 3;
 const HINT_6_INDEX = 5;
 const HINT_9_INDEX = 8;
 const PAGE_SIZE = 20;
-const STORAGE_KEY = "kono-poke-dare:hint-review:v1";
+// 観点や基準を変えたら番号を上げて、別の基準で付けた評点を引き継がない。
+const STORAGE_KEY = "kono-poke-dare:hint-review:v2";
 const SCORE_CHOICES = ["1", "2", "3", "4", "5", "NA"];
 
 /**
@@ -65,6 +67,7 @@ export function summarizeRecord(record, ids) {
     total: numbers.length > 0 ? numbers.reduce((a, b) => a + b, 0) : null,
     minScore: numbers.length > 0 ? Math.min(...numbers) : null,
     needsFix: numbers.some((score) => score <= NEEDS_FIX_THRESHOLD),
+    needsComment: numbers.some((score) => score <= NEEDS_COMMENT_THRESHOLD),
     complete: ids.every((id) => scores[id] !== undefined),
   };
 }
@@ -549,7 +552,7 @@ function mount() {
     const record = state.get(number);
     if (warning instanceof HTMLElement) {
       warning.hidden = !(
-        summarizeRecord(record, ids).needsFix && record?.comment === ""
+        summarizeRecord(record, ids).needsComment && record?.comment === ""
       );
     }
   };
@@ -589,7 +592,7 @@ function mount() {
     const textarea = h("textarea", {
       rows: 2,
       value: record?.comment ?? "",
-      placeholder: "どのヒントのどこを直すか",
+      placeholder: "どのヒントのどこが問題か。照合した資料",
       ariaLabel: `No.${entry.number} のコメント`,
     });
     textarea.addEventListener("input", () => {
@@ -648,7 +651,7 @@ function mount() {
       ),
       textarea,
       h("p", { className: "warning", hidden: true }, [
-        "どこを直すかをコメントに書いてください",
+        "どのヒントのどこが問題かをコメントに書いてください",
       ]),
     ]);
     article.dataset.testid = `card-${entry.number}`;
@@ -753,7 +756,7 @@ function mount() {
     if (!complete) {
       return;
     }
-    if (summarizeRecord(record, ids).needsFix && record.comment === "") {
+    if (summarizeRecord(record, ids).needsComment && record.comment === "") {
       focusComment(entry.number);
     } else {
       advance();

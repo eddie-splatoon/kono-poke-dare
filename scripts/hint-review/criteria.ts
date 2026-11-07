@@ -14,29 +14,29 @@ export type Criterion = {
 export const CRITERIA: readonly Criterion[] = [
   {
     id: "accuracy",
-    label: "手書きの正確さ(ヒント 6、9)",
+    label: "手書きの正確さ(ヒント 6、9。資料と照合していなければ NA)",
     anchors: {
-      high: "誤りなし",
+      high: "資料と照合して誤りなし",
       middle: "細部に疑いがある",
       low: "明確な誤り(色、形、モチーフ)",
     },
   },
   {
     id: "hint6_strength",
-    label: "ヒント 6 の強さ",
+    label: "ヒント 6 の強さ(これだけを見たときの候補の数)",
     anchors: {
-      high: "候補を絞れるが特定はできない",
-      middle: "やや特定しやすい、または少し弱い",
-      low: "これだけで特定できる、または全く絞れない",
+      high: "数匹〜10 匹程度",
+      middle: "2〜3 匹、または数十匹",
+      low: "1 匹に決まる、または全く絞れない",
     },
   },
   {
     id: "hint9_strength",
-    label: "ヒント 9 の手がかり",
+    label: "ヒント 9 の手がかり(ヒント 1〜9 を見たあとに残る候補の数)",
     anchors: {
-      high: "ほぼ特定できる",
-      middle: "手がかりとして弱めである",
-      low: "進化前の名前だけなど、ヒント 6 より弱い",
+      high: "1〜2 匹",
+      middle: "3〜5 匹",
+      low: "ヒント 8 までと比べて候補が減らない",
     },
   },
   {
@@ -44,8 +44,8 @@ export const CRITERIA: readonly Criterion[] = [
     label: "難易度の順序(6 → 10)",
     anchors: {
       high: "順に易しくなる",
-      middle: "一部が入れ替わるが許容できる",
-      low: "明らかに逆転している",
+      middle: "入れ替わりがあるが許容できる(組をコメントに書く)",
+      low: "明らかに逆転している(組をコメントに書く)",
     },
   },
   {
@@ -55,6 +55,24 @@ export const CRITERIA: readonly Criterion[] = [
       high: "自然である",
       middle: "少し不自然である",
       low: "意味が通らない、直すべき",
+    },
+  },
+  {
+    id: "redundancy",
+    label: "ヒント 9 の新しさ(ヒント 1〜8 との重なり)",
+    anchors: {
+      high: "新しい情報だけである",
+      middle: "一部が重なるが、新しい情報もある",
+      low: "新しい情報がない",
+    },
+  },
+  {
+    id: "name_leak",
+    label: "名前の漏れ(ヒント 1〜9)",
+    anchors: {
+      high: "名前もその一部も出ていない",
+      middle: "名前を連想させる語がある",
+      low: "名前や、その大部分が出ている",
     },
   },
 ];
