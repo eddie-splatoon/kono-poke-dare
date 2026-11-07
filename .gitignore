@@ -45,6 +45,9 @@ next-env.d.ts
 # PokeAPI の応答のキャッシュ
 /.cache/
 
+# ヒントの評価シートの生成物
+/.review/
+
 # git worktree
 /.claude/worktrees/
 
