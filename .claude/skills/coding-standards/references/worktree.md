@@ -64,5 +64,6 @@ scripts/worktree.sh new feat/second --base origin/feat/first
 - **削除されるファイル**: `.gitignore` の対象のファイル(`node_modules`、`.env*` など)は、確認なしで一緒に消える。残したいものは worktree の外に置く
 - **別のセッションがいる worktree**: マージ済みで変更がなければ、別のセッションが作業中でも削除される。マージ後の worktree で作業を続けない
 - **stash**: stash はすべての worktree で共有される。`git stash pop` で別のセッションの変更を取り出さないように、一時的なコミットを使う
+- **サブエージェント**: セッションが `EnterWorktree` で worktree に入っていると、サブエージェントもその worktree に隔離され、別の worktree に書き込めない。サブエージェントを別々の worktree で動かすときは、司令塔を親のチェックアウトに置く(`parallel-data-change` Skill)
 - **開発サーバー**: 並列で動かすときは、`pnpm dev --port 3001` のようにポートを分ける
 - **名義**: Git のローカル設定は worktree 間で共有されるので、worktree ごとの設定は不要である。`CLAUDE.md` の「操作アカウント」はそのまま適用する
