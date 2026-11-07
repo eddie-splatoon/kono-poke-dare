@@ -37,4 +37,10 @@ scripts/worktree.sh new feat/some-thing  # .claude/worktrees/ に作り、依存
 scripts/worktree.sh clean                # PR がマージ済みの worktree を削除する
 ```
 
-コーディング規約は [`.claude/skills/coding-standards/`](.claude/skills/coding-standards/SKILL.md)、機能仕様は [`docs/specs/`](docs/specs/README.md) にあります。脆弱性の報告は [`SECURITY.md`](SECURITY.md) を参照してください。
+## コーディングエージェント
+
+共通の開発ルールは [`AGENTS.md`](AGENTS.md) にあります。Codex はリポジトリルートから起動すると自動で読み込みます。Claude Code 固有の設定は [`CLAUDE.md`](CLAUDE.md) を参照してください。
+
+Claude Code と Codex で同じ Skill を使います。Codex では `$coding-standards` を選び、全世代の問題データ変更では `$parallel-data-change` を選んでください。`.agents/skills/` は `.claude/skills/` にある Skill 正本へのリンクです。
+
+GitHub 操作と Git の名義設定は `AGENTS.md` と `CLAUDE.md` の「clone し直したとき」を確認してください。機能仕様は [`docs/specs/`](docs/specs/README.md)、脆弱性の報告は [`SECURITY.md`](SECURITY.md) を参照してください。
