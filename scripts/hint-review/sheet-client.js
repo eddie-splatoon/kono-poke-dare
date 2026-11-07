@@ -32,11 +32,11 @@
 
 const NEEDS_FIX_THRESHOLD = 2;
 const NEEDS_COMMENT_THRESHOLD = 3;
-const HINT_6_INDEX = 5;
+const HINT_8_INDEX = 7;
 const HINT_9_INDEX = 8;
 const PAGE_SIZE = 20;
 // 観点や基準を変えたら番号を上げて、別の基準で付けた評点を引き継がない。
-const STORAGE_KEY = "kono-poke-dare:hint-review:v2";
+const STORAGE_KEY = "kono-poke-dare:hint-review:v3";
 const SCORE_CHOICES = ["1", "2", "3", "4", "5", "NA"];
 
 /**
@@ -116,7 +116,7 @@ export function buildCsv(entries, ids, state) {
     "min_score",
     "needs_fix",
     "comment",
-    "hint_6",
+    "hint_8",
     "hint_9",
   ];
   const rows = entries.flatMap((entry) => {
@@ -140,7 +140,7 @@ export function buildCsv(entries, ids, state) {
         minScore ?? "",
         needsFix ? 1 : 0,
         record.comment,
-        entry.hints[HINT_6_INDEX] ?? "",
+        entry.hints[HINT_8_INDEX] ?? "",
         entry.hints[HINT_9_INDEX] ?? "",
       ],
     ];
@@ -616,7 +616,7 @@ function mount() {
             "li",
             {
               className:
-                index === HINT_6_INDEX || index === HINT_9_INDEX ? "hand" : "",
+                index === HINT_8_INDEX || index === HINT_9_INDEX ? "hand" : "",
             },
             [hint],
           ),

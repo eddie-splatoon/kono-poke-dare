@@ -101,7 +101,7 @@ test("R-37: 採点して書き出した CSV を file:// のページからダウ
   const [header, row, ...rest] = csv.replace(/^﻿/, "").trim().split("\r\n");
   expect(rest).toEqual([]);
   expect(header.startsWith("number,name,generation,")).toBe(true);
-  expect(row).toContain(",4,4,4,4,NA,4,4,24,4,0,外見に疑い,");
+  expect(row).toContain(",4,4,4,4,NA,4,20,4,0,外見に疑い,");
 });
 
 test("R-38: 再読み込みしても採点が残る", async ({ page }) => {
@@ -153,9 +153,9 @@ test("R-40: 絞り込みの結果を 1 ページ 20 件で表示し、ページ�
 
 test("R-41: キーボードで全観点を埋めると次のカードへ移る", async ({ page }) => {
   await open(page);
-  await page.keyboard.type("5444444");
+  await page.keyboard.type("544444");
   await expect(radio(page, 1, "accuracy", "5")).toBeChecked();
-  await expect(radio(page, 1, "name_leak", "4")).toBeChecked();
+  await expect(radio(page, 1, "redundancy", "4")).toBeChecked();
   await page.keyboard.type("0");
   await expect(radio(page, 2, "accuracy", "NA")).toBeChecked();
 });
@@ -192,7 +192,7 @@ test("R-44: キーボードで埋めて 3 以下があれば、コメント欄�
   page,
 }) => {
   await open(page);
-  await page.keyboard.type("5535555");
+  await page.keyboard.type("553555");
   const comment = page.getByTestId("card-1").getByRole("textbox");
   await expect(comment).toBeFocused();
   await page.keyboard.type("色が違う");
@@ -208,14 +208,16 @@ test("R-46: 観点を変える前の保存値を引き継がない", async ({ pa
   const version = hintsVersion(fakeEntries()[0].hints);
   await page.evaluate((recordVersion) => {
     localStorage.clear();
-    localStorage.setItem(
-      "kono-poke-dare:hint-review:v1",
-      JSON.stringify({
-        records: {
-          1: { version: recordVersion, scores: { accuracy: 4 }, comment: "" },
-        },
-      }),
-    );
+    for (const key of ["v1", "v2"]) {
+      localStorage.setItem(
+        `kono-poke-dare:hint-review:${key}`,
+        JSON.stringify({
+          records: {
+            1: { version: recordVersion, scores: { accuracy: 4 }, comment: "" },
+          },
+        }),
+      );
+    }
   }, version);
   await page.reload();
   await expect(page.getByTestId("card-1")).toBeVisible();

@@ -43,7 +43,7 @@ function evolutionHint(
   stepsAfter: number,
   branches: number,
 ) {
-  return hintOf(8, { evolution: { stepsBefore, stepsAfter, branches } });
+  return hintOf(6, { evolution: { stepsBefore, stepsAfter, branches } });
 }
 
 describe("buildQuestion", () => {
@@ -103,8 +103,8 @@ describe("buildQuestion", () => {
     expect(hintOf(5)).toBe("初めて登場したのは第 3 世代である。");
   });
 
-  it("R-44: ヒント 6 と 9 は手書きの文をそのまま使う", () => {
-    expect(hintOf(6)).toBe(handWritten.appearance);
+  it("R-44: ヒント 8 と 9 は手書きの文をそのまま使う", () => {
+    expect(hintOf(8)).toBe(handWritten.appearance);
     expect(hintOf(9)).toBe(handWritten.signature);
   });
 
@@ -116,25 +116,25 @@ describe("buildQuestion", () => {
     expect(hintOf(7, { types: ["ほのお"] })).toBe("タイプはほのおのみである。");
   });
 
-  it("R-47: ヒント 8 は進化しない種族ではそのことを示す", () => {
+  it("R-47: ヒント 6 は進化しない種族ではそのことを示す", () => {
     expect(evolutionHint(0, 0, 0)).toBe("進化しないポケモンである。");
   });
 
-  it("R-48: ヒント 8 は最初の段階では進化できる回数を示す", () => {
+  it("R-48: ヒント 6 は最初の段階では進化できる回数を示す", () => {
     expect(evolutionHint(0, 2, 1)).toBe("2 回進化するポケモンである。");
   });
 
-  it("R-49: ヒント 8 は途中の段階では経た回数と残りの回数を示す", () => {
+  it("R-49: ヒント 6 は途中の段階では経た回数と残りの回数を示す", () => {
     expect(evolutionHint(1, 1, 1)).toBe(
       "1 回進化した姿で、あと 1 回進化する段階である。",
     );
   });
 
-  it("R-50: ヒント 8 は最終段階では経た回数を示す", () => {
+  it("R-50: ヒント 6 は最終段階では経た回数を示す", () => {
     expect(evolutionHint(2, 0, 0)).toBe("2 回の進化を経た最終段階の姿である。");
   });
 
-  it("R-51: ヒント 8 は進化先が分かれるときはその数を示す", () => {
+  it("R-51: ヒント 6 は進化先が分かれるときはその数を示す", () => {
     expect(evolutionHint(0, 1, 8)).toBe(
       "1 回進化し、進化先は 8 種類に分かれるポケモンである。",
     );
