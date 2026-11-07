@@ -13,7 +13,8 @@
     "e2e": "playwright test",
     "data:fetch": "node scripts/question-data/fetch-facts.ts",
     "data:build": "node scripts/question-data/build-questions.ts && biome format --write public/data/questions data/question-sources",
-    "data:scope": "node scripts/question-data/check-shard-scope.ts"
+    "data:scope": "node scripts/question-data/check-shard-scope.ts",
+    "data:review": "node scripts/hint-review/generate.ts"
   },
   "dependencies": {
     "next": "16.4.5",

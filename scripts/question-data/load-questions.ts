@@ -14,7 +14,7 @@ export class DuplicateSourceError extends Error {
   }
 }
 
-async function readGenerationFiles<T>(directory: string): Promise<T[]> {
+export async function readGenerationFiles<T>(directory: string): Promise<T[]> {
   const fileNames = (await readdir(directory)).filter((name) =>
     /^gen-\d+\.json$/.test(name),
   );

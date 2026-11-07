@@ -27,6 +27,7 @@ pnpm dev
 | `pnpm data:fetch <世代>`          | PokeAPI から世代(1〜9)の事実を取得する(手元で手動で実行する)   |
 | `pnpm data:build`                 | 事実と手書きデータから配信データを生成する                     |
 | `pnpm data:scope <世代> [比較元]` | 担当の世代の範囲外の変更を検出する(問題データの並列変更で使う) |
+| `pnpm data:review`                | ヒントを点数で評価する HTML を `.review/` に生成する           |
 
 `pnpm e2e` の前に `pnpm build` を実行します。初回は `pnpm exec playwright install chromium` でブラウザも取得します。worktree を並列で使うときは、`E2E_PORT` でポートを分けます。
 
