@@ -17,21 +17,21 @@
     "data:review": "node scripts/hint-review/generate.ts"
   },
   "dependencies": {
-    "next": "16.4.5",
-    "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.6.5",
-    "@playwright/test": "1.64.1",
+    "@biomejs/biome": "2.6.8",
+    "@playwright/test": "1.65.1",
     "@tailwindcss/turbopack": "^4",
     "@types/node": "^24.19.2",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "fake-indexeddb": "6.2.7",
+    "fake-indexeddb": "6.2.8",
     "tailwindcss": "^4",
     "typescript": "^7.0.2",
-    "vitest": "^5.1.0"
+    "vitest": "^5.1.1"
   },
   "packageManager": "pnpm@10.33.0",
   "engines": {
